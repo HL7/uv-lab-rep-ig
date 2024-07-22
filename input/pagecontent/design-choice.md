@@ -11,14 +11,14 @@ There are two ways - in principle - for representing a Laboratory report in HL7 
 * by treating the report as any other clinical document, i.e. using a HL7 FHIR document Bundle.
 
 
-In many European countries:
+In many countries:
 * A Laboratory Report is a **legally signed document**
 * Reports are often structured and may include different kinds of test results
 * Several implementations are currently based on HL7 CDA (mainly IHE XD-LAB) and still use document exchange infrastructures (e.g. IHE XD*).
 
-On the other hand, typical HL7 FHIR consumers expect to get Laboratory Reports by searching per DiagnosticReport.
+On the other hand, typical HL7 FHIR consumers expect to get Laboratory Reports by searching per DiagnosticReport and not in all the usage context is expcted to be used a Documental approach.
 
-The team looked therefore for a solution balancing the two approaches (FHIR document and DiagnosticReport), taking into account the R5 DiagnosticReport design pattern where the DiagnosticReport Vs Composition relationship is directed from the DiagnosticReport to the Composition resource.
+The solution proposed in the European Guide - and documented also in this guide - tries to balance the two expectations (FHIR document and DiagnosticReport), limiting as possible the implementation options. Moreover it takes into account the R5 DiagnosticReport design pattern where the DiagnosticReport Vs Composition relationship is directed from the DiagnosticReport to the Composition resource.
 
 In brief:
 
