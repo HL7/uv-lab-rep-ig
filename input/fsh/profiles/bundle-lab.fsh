@@ -37,8 +37,14 @@ Expression: "entry.resource.ofType(Composition).count() = 1"
 Severity:    #error
 
 Invariant: one-dr
-Description: "A laboratory report SHALL include one and only one DiagnosticReport"
+Description: "A laboratory report bundle SHALL include one and only one DiagnosticReport"
 Expression: "entry.resource.ofType(DiagnosticReport).count() = 1"
+Severity:    #error
+
+Invariant: dr-to-comp-link
+Description: "The DiagnosticReport included in a laboratory report bundle SHALL always refers a composition"
+Expression: "entry.resource.ofType(DiagnosticReport).extension(http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition).exists()"
+// EXPRESSION TO BE CHECKED
 Severity:    #error
 
 //==========================
@@ -63,6 +69,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * obeys dr-comp-category
 * obeys dr-comp-subj
 * obeys dr-comp-enc
+* obeys dr-to-comp-link // expresssion to be checked
 
 
 * identifier ^short = "Business identifier for this Laboratory Report"

@@ -9,7 +9,7 @@ Description: "DiagnosticReport used to represent an entry of a Laboratory Report
 * . ^short = "Laboratory Report DiagnosticReport"
 * . ^definition = "Laboratory Report DiagnosticReport"
 
-* extension contains $diagnostic-report-composition-r5 named DiagnosticReportCompositionR5 1..1
+* extension contains $diagnostic-report-composition-r5 named DiagnosticReportCompositionR5 0..1
 
 * extension[DiagnosticReportCompositionR5]
   * ^short = "Associated Lab Report Composition"

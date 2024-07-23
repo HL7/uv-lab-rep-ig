@@ -1,5 +1,3 @@
-
-
 ### Design Choices
 
 {% include fsh-link-references.md %}
@@ -10,32 +8,55 @@ There are two ways - in principle - for representing a Laboratory report in HL7 
 * by using the DiagnosticReport resource; or 
 * by treating the report as any other clinical document, i.e. using a HL7 FHIR document Bundle.
 
+The solution proposed in this guide tries to take in consideration the very different meanings that a Laboratory Report can assume in different countries.
 
-In many countries:
-* A Laboratory Report is a **legally signed document**
-* Reports are often structured and may include different kinds of test results
-* Several implementations are currently based on HL7 CDA (mainly IHE XD-LAB) and still use document exchange infrastructures (e.g. IHE XD*).
+In fact, in many countries a Laboratory Report is a **legally signed document**. 
+Reports are often structured in sections and may include different kinds of test results
+There are several implementations still based on HL7 CDA (mainly IHE XD-LAB) progressivly moving to HL7 FHIR and still using document exchange infrastructures (e.g. IHE XD*).
 
-On the other hand, typical HL7 FHIR consumers expect to get Laboratory Reports by searching per DiagnosticReport and not in all the usage context is expcted to be used a Documental approach.
+In others, a report is a simple collection of results, not treated as a document and often not providing any structured content.
 
-The solution proposed in the European Guide - and documented also in this guide - tries to balance the two expectations (FHIR document and DiagnosticReport), limiting as possible the implementation options. Moreover it takes into account the R5 DiagnosticReport design pattern where the DiagnosticReport Vs Composition relationship is directed from the DiagnosticReport to the Composition resource.
+This guide proposes a scalable approach:
+* Report as collection of results: DiagnosticReport (figure 1)
+* Report as structured collection of results: DiagnosticReport with  Composition (figure 2)
+* Report as document: DiagnosticReport with Composition in a Document Bundle (figure 3)
+allowing the different jurisdictions to select the solution that better fits with their requirements; while assuring the capability for everyone to retrieve laboratory report data by searching per DiagnosticReport.
+
 
 In brief:
 
 * A Laboratory Report is always represented by one and only one DiagnosticReport.
-* A DiagnosticReport shall always refers a Composition.
-* The referred Composition:
+* A DiagnosticReport may refers a Composition. (Required for documents)
+* When present, the referred Composition:
   * defines the report structure, often just a single section;
   * provides a mean for assembling the report as a document (i.e. as a Bundle of type 'document')
-* The document Bundle represents the legally signable report and it includes all the data defining the report.
+* A document Bundle may be used to represent the legally signable report, including all the data defining the report.
 
-The following figure graphically summarizes the described design approach.
+
+The following figures graphically summarizes the described design approach.
+
+
+<div>
+<img src="lab-structure-1.png"  alt="Laboratory report design approach" width="80%">
+<p>Figure 1 - Report as collection of results: DiagnosticReport</p>
+<p></p>
+</div>
+
+<div>
+<img src="lab-structure-2.png"  alt="Laboratory report design approach" width="80%">
+<p>Figure 2 - Report as structured collection of results: DiagnosticReport with Composition </p>
+<p></p>
+</div>
 
 <div>
 <img src="lab-structure.png"  alt="Laboratory report design approach" width="80%">
-<p>Figure 1 - Overview of the report design approach</p>
+<p>Figure 3 - Report as document: DiagnosticReport with Composition in a Document Bundle</p>
 <p></p>
 </div>
+
+
+The document based solution, adopted in the European REALM, tries to balance the two expectations of having a HL7 FHIR document and searching report per DiagnosticReport, limiting as possible the implementation options. 
+Moreover it takes into account the R5 DiagnosticReport design pattern where the DiagnosticReport Vs Composition relationship is directed from the DiagnosticReport to the Composition resource.
 
 The authors are aware of the fact that this choice requires additional work to the creator, requesting to consistently record in both DiagnosticReport and Composition a set of information. 
 However they believe, that it enables for more options for the consumer:
@@ -47,7 +68,7 @@ However they believe, that it enables for more options for the consumer:
 
 #### Pre-adoption of R5 Rules for Document Bundles
 
-To support the described approach, this guide allows for the **pre-adoption of the R5 rules for the inclusion of the resources in a document Bundle**, that is:
+To support the described documental approach, this guide allows for the **pre-adoption of the R5 rules for the inclusion of the resources in a document Bundle**, that is:
 
 _"The document bundle SHALL include only: <..>
 The supporting information: Any resources that are part of the graph of resources that reference or are referenced from the composition set, either directly or indirectly (e.g. recursively in a chain)"_

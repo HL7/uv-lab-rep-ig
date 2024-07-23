@@ -48,8 +48,9 @@ The project background is described in the [background](background.html) page.
 
 ### Design choices
 
-The solution adopted by this guide - and detailed in the [Design choices](design-choice.html) page - balances the business requirement of the Laboratory Report as legally signable document (i.e. as a FHIR document), with the expectation in several usage contexts to not rely on the documental approach. All this, taking into account the R5 DiagnosticReport design pattern where the DiagnosticReport <-> Composition relationship is directed from the DiagnosticReport to the Composition resource.
-This is done by supporting both perspectives (see figure below) requiring the document bundle ( [BundleLabReportUv] ) to always include a DiagnosticReport ( [DiagnosticReportLabUv] ) and enabling the pre-adoption of the R5 rules for the inclusion of entries in the Document Bundle.
+The solution adopted by this guide - and detailed in the [Design choices](design-choice.html) page - balances the business requirement of some jurisdictions of the Laboratory Report as legally signable document (i.e. as a FHIR document), with the expectation in several usage contexts to not rely on the documental approach. 
+This guide proposes a scalable approach
+This is done by supporting a scalable approach allowing the different jurisdictions to select the solution that better fits with their requirements; while assuring the capability for everyone to retrieve laboratory report data by searching per DiagnosticReport.
 
 <div>
 <img src="lab-structure.png"  alt="Laboratory report design approach" width="50%">
