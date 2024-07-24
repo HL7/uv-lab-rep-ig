@@ -43,7 +43,7 @@ Severity:    #error
 
 Invariant: dr-to-comp-link
 Description: "The DiagnosticReport included in a laboratory report bundle SHALL always refers a composition"
-Expression: "entry.resource.ofType(DiagnosticReport).extension(http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition).exists()"
+Expression: "entry.resource.ofType(DiagnosticReport).extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition').exists()"
 // EXPRESSION TO BE CHECKED
 Severity:    #error
 
