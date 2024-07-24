@@ -15,7 +15,6 @@ When the ips-pat-1 invariant is satisfied \(Patient.name.given, Patient.name.fam
 * identifier ^short = "Patient identifiers" // MS according to IPS
 
 * name 1..* // MS according to IPS
-* name only HumanNameEu
 * name obeys eu-pat-1
 * name ^requirements = "Need to be able to track the patient by multiple names. Examples are your official name and a partner name.\r\nThe Alphabetic representation of the name SHALL be always provided"
 * name.extension contains $ext-data-absent-reason named name-absent-reason 0..*

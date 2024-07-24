@@ -55,8 +55,8 @@ dependencies:
 pages:
   index.md:
     title: Home
-  background.md:
-    title: Background
+ # background.md:
+ #   title: Background
     # to be removed --->
   # semantic-notes.md:
     # title: Laboratory Result Report
@@ -67,8 +67,8 @@ pages:
     title: Managing Laboratory Report statuses
   design-choice.md:
     title: Design choices
-  challenges.md:
-    title: Challenges
+ # challenges.md:
+ #   title: Challenges
   notes.md:
     title: Implementation notes
   crm.md:
@@ -153,8 +153,8 @@ menu:
   Home: index.html
   Table of Contents: toc.html
   Background:
-    Background: background.html
-    Challenges: challenges.html
+    # Background: background.html
+    # Challenges: challenges.html
     Design Choices: design-choice.html
     Certified reference material: crm.html
   Functional Specifications:
@@ -319,10 +319,6 @@ resources:
     name: Patient Obligations
     description: Specify the functional capabilities that the defined actors may, should or shall applied to the Patient EU Lab profile elements.
 
-  StructureDefinition/HumanName-obl-uv-lab:
-    name: Human Name Obligations
-    description: Specify the functional capabilities that the defined actors may, should or shall applied to the Human Name profile elements.
-
   StructureDefinition/Specimen-obl-uv-lab:
     name: Specimen Obligations
     description: Specify the functional capabilities that the defined actors may, should or shall applied to the Specimen profile elements.
@@ -363,7 +359,6 @@ groups:
       - ActorDefinition/actor-creator-uv-lab
       - ActorDefinition/actor-repos-uv-lab
       - StructureDefinition/Patient-obl-uv-lab
-      - StructureDefinition/HumanName-obl-uv-lab
       - StructureDefinition/Specimen-obl-uv-lab
       - StructureDefinition/ServiceRequest-obl-uv-lab
       - StructureDefinition/Observation-obl-uv-lab

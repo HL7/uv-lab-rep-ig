@@ -25,8 +25,6 @@
 <artifact id="StructureDefinition/DiagnosticReport-uv-lab" key="StructureDefinition-DiagnosticReport-uv-lab" name="DiagnosticReport: Laboratory Report"/>
 <artifact id="DiagnosticReport/dr-lab-example" key="DiagnosticReport-dr-lab-example" name="DiagnosticReport: example"/>
 <artifact id="StructureDefinition/composition-diagnosticReportReference" key="StructureDefinition-composition-diagnosticReportReference" name="Document DiagnosticReport Reference"/>
-<artifact id="StructureDefinition/HumanName-obl-uv-lab" key="StructureDefinition-HumanName-obl-uv-lab" name="Human Name Obligations"/>
-<artifact id="StructureDefinition/HumanName-eu" key="StructureDefinition-HumanName-eu" name="HumanName (Eu)"/>
 <artifact id="ValueSet/lab-certifiedRefMaterial-uv-lab" key="ValueSet-lab-certifiedRefMaterial-uv-lab" name="Laboratory Certified Reference Material"/>
 <artifact id="ValueSet/lab-obsCode-uv-lab" key="ValueSet-lab-obsCode-uv-lab" name="Laboratory Code"/>
 <artifact id="ValueSet/lab-obsCode-loinc-uv-lab" key="ValueSet-lab-obsCode-loinc-uv-lab" name="Laboratory Code: LOINC"/>
@@ -81,9 +79,7 @@
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="contributors" name="Authors and contributors"/>
-<page key="background" name="Background"/>
 <page key="crm" name="Certified reference material"/>
-<page key="challenges" name="Challenges"/>
 <page key="design-choice" name="Design choices"/>
 <page key="downloads" name="Downloads"/>
 <page key="index" name="Home"/>

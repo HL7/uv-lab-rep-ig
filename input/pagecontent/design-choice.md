@@ -37,13 +37,13 @@ The following figures graphically summarizes the described design approach.
 
 
 <div>
-<img src="lab-structure-1.png"  alt="Laboratory report design approach" width="80%">
+<img src="lab-structure-1.png"  alt="Laboratory report design approach" width="40%">
 <p>Figure 1 - Report as collection of results: DiagnosticReport</p>
 <p></p>
 </div>
 
 <div>
-<img src="lab-structure-2.png"  alt="Laboratory report design approach" width="80%">
+<img src="lab-structure-2.png"  alt="Laboratory report design approach" width="50%">
 <p>Figure 2 - Report as structured collection of results: DiagnosticReport with Composition </p>
 <p></p>
 </div>

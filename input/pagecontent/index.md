@@ -42,10 +42,6 @@ The goal of this Implementation Guide is to define a universal standard for the 
 This project use as starting point the [HL7 Europe Laboratory Report FHIR IG](https://hl7.eu/fhir/laboratory) and other existing guides; and it aims to be realized in collaboration with the IHE PALM community.
 
 
-### Background
-
-The project background is described in the [background](background.html) page.
-
 ### Design choices
 
 The solution adopted by this guide - and detailed in the [Design choices](design-choice.html) page - balances the business requirement of some jurisdictions of the Laboratory Report as legally signable document (i.e. as a FHIR document), with the expectation in several usage contexts to not rely on the documental approach. 
