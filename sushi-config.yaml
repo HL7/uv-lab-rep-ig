@@ -4,11 +4,16 @@ canonical: http://hl7.org/fhir/uv/lab-report
 name:  Hl7LaboratoryReportIg
 title: HL7 Laboratory Report
 description: This guide describes how the Laboratory Report can be represented in the UV REALM.
-status: draft # draft | active | retired | unknown
-version: 0.1.0-ci #
+status: active # draft | active | retired | unknown
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
+    valueCode: oo
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+    valueCode: trial-use
+version: 0.1.0-ballot #
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
-releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+releaseLabel: STU 1 Ballot # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # https://www.hl7.org/fhir/valueset-jurisdiction.html
 
@@ -17,13 +22,13 @@ jurisdiction: 	http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World" # urn:
 
 # 
 publisher:
-  name:  Orders and Observations
-  url: http://www.hl7.org/Special/committees/oo
+  name: HL7 International / Orders and Observations
+  url: http://www.hl7.org/Special/committees/orders
   # email: test@example.org
 
 # TO BE UPDATED
-copyright: >-
-  Used by permission of HL7 International, all rights reserved Creative Commons License
+#copyright: >-
+#  Used by permission of HL7 International, all rights reserved Creative Commons License
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced
