@@ -10,7 +10,7 @@ extension:
     valueCode: oo
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
     valueCode: trial-use
-version: 0.1.0-ballot #
+version: 1.0.0-ballot #
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
 releaseLabel: STU 1 Ballot # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use

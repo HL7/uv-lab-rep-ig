@@ -1,0 +1,10 @@
+{
+  "package-id" : "hl7.fhir.uv.lab-report",
+  "version" : "1.0.0-ballot",
+  "path" : "http://hl7.org/fhir/uv/lab-report",
+  "mode" : "working",
+  "status" : "ballot",
+  "sequence" : "STU 1",
+  "desc" : "This publication is for ballot of a new STU release (1.0.0).",
+  "descmd" : "This publication is for ballot of a new STU release (1.0.0)."
+}
