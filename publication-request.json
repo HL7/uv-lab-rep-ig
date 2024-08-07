@@ -6,5 +6,8 @@
   "status" : "ballot",
   "sequence" : "STU 1",
   "desc" : "This publication is for ballot of a new STU release (1.0.0).",
-  "descmd" : "This publication is for ballot of a new STU release (1.0.0)."
+  "descmd" : "This publication is for ballot of a new STU release (1.0.0).",
+  "first" : true,
+  "title" : "HL7 Laboratory Report",
+  "ci-build" : "https://github.com/HL7/uv-lab-rep-ig"
 }
