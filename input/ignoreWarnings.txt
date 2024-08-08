@@ -10,7 +10,6 @@
 Error from http://tx.fhir.org/r4: Unable to provide support for code system http://npu-terminology.org
 A definition for CodeSystem 'http://npu-terminology.org' could not be found, so the code cannot be validated
 WARNING: ValueSet.where(id = 'obsCode-uv-lab'): Unable to expand imported value set http://hl7.org/fhir/uv/lab-report/ValueSet/obsCode-npu-uv-lab: Unable to expand imported value set: Error from http://tx.fhir.org/r4: Unable to provide support for code system http://npu-terminology.org (and Error from http://tx.fhir.org/r4: Unable to provide support for code system http://npu-terminology.org)
-%because the code system http://loinc.org, http://npu-terminology.org was not found%
 
 # The NIBSC code system is not available in the IG publication tooling (IG Publisher, tx.fhir.org)
 A definition for CodeSystem 'http://nibsc.org' could not be found, so the code cannot be validated
