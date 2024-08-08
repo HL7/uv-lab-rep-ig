@@ -72,7 +72,7 @@ That's why it is important to explicitly include informaiton about measurement m
 * method from LabTechniqueVs (preferred) // added binding to an agreed lab measurement method value set
 * specimen only Reference(SpecimenUvLab)
   * ^comment = "When the specimen is applicable and known it shall be documented"
-// * hasMember only Reference(ObservationResultsLabUv or ObservationResultsEu)
+// * hasMember only Reference(ObservationResultsLabUv)
 * device ^short = "Measuring instrument"
 * hasMember only Reference(ObservationResultsLabUv)
 * hasMember ^definition = "A reference to another Observation profiled by Observation-results-laboratory-uv-ips. The target observation (for instance an individual test member of a panel) is considered as a sub-observation of the current one, which plays the role of a grouper."

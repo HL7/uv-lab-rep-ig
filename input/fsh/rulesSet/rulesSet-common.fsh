@@ -40,7 +40,7 @@ RuleSet: SectionEntrySliceComRules (short, def)
 * entry ^definition = "{def}"
 
 RuleSet: SectionEntrySliceDefRules (name, card, short, def, profiles)
-// SectionEntrySliceDefRules (flags, 0.., "Care Team", "Care Team", CareTeamEu)
+// SectionEntrySliceDefRules (flags, 0.., "Care Team", "Care Team")
 
 * entry contains {name} 0..1
 * entry[{name}] {card}
