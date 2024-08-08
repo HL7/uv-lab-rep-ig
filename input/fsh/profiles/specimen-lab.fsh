@@ -27,7 +27,7 @@ Otherwise the relationship is recorded in the Specimen.request element"""
   * extension[bodySite].valueReference only Reference(BodyStructureUvLab)
 * processing.additive only Reference(Substance or SpecimenAdditiveSubstance)
 * container
-  * type from LabSpecimenContainerUvLab (preferred)
+  * type from LabSpecimenContainerVs (preferred)
   * additive[x] 0..0
   * extension contains $specimen-container-device-r5 named device 0..1
   * extension[device].valueReference only Reference(Device)
@@ -39,4 +39,4 @@ Parent: Substance
 Id: Substance-additive-uv-lab
 Title: "Substance: Specimen Additive Substance"
 Description: """This profile defines how to represent Specimen Additive Substances in HL7 FHIR for the purpose of this guide."""
-* code from LabSpecimenAdditiveUvLab (preferred)
+* code from LabSpecimenAdditiveVs (preferred)

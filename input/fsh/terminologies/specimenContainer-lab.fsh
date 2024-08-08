@@ -1,4 +1,4 @@
-ValueSet: LabSpecimenContainerUvLab
+ValueSet: LabSpecimenContainerVs
 Id: specimenContainer-uv-lab
 Title: "Specimen Container"
 Description: "List of the containers commonly used to collect specimens (e.g. urine, blood,..)."

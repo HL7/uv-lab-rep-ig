@@ -7,7 +7,7 @@ This is used to identify the species when a specimen is collected from an animal
 
 * insert SetFmmandStatusRule ( 2, trial-use)
 * extension contains $patient-animal named patient-animal 1..1
-* extension[patient-animal].extension[species].valueCodeableConcept from LabSpeciesTypesUvLab (example)
+* extension[patient-animal].extension[species].valueCodeableConcept from LabSpeciesTypesVs (example)
 * extension contains $recordedSexOrGender named recordedSexOrGender 0..1
 * extension[recordedSexOrGender]
 
