@@ -1,7 +1,7 @@
 // -------------------------------------------------------------------------------
 //  Concept Model. File: 					labRpt-to-fhir-map.fsh
 // -------------------------------------------------------------------------------
-Instance: ConceptMap-uv-lab-diagRptStatus2CompStatus
+Instance: ConceptMap-diagRptStatus2CompStatus-uv-lab
 InstanceOf: ConceptMap
 Usage: #definition
 

@@ -9,7 +9,7 @@ Description: """This profile defines how to represent an laboratory orders using
 * . ^short = "Laboratory Order"
 * . ^definition = "Laboratory Order composition."
 * identifier 1..
-* code from LabOrderCodesEuVs (preferred)
+* code from LabOrderCodesVs (preferred)
 * subject 1..
 * subject only Reference (PatientUvLab or PatientAnimalUvLab or Group or Location or Device)
 * requisition ^short = "Composite Request ID."

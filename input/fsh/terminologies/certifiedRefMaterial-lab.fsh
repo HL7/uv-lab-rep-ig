@@ -1,5 +1,5 @@
 ValueSet: LabCertifiedReferenceMaterialVS
-Id: lab-certifiedRefMaterial-uv-lab
+Id: certifiedRefMaterial-uv-lab
 Title: "Laboratory Certified Reference Material"
 Description: "List of the coded concepts describing the certified reference material used for the calibration, typically used when the unit of the result is UCUM [IU]."
 

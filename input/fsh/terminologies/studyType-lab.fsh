@@ -1,5 +1,5 @@
 ValueSet:      LabStudyTypesVs
-Id:	       lab-studyType-uv-lab
+Id:	       studyType-uv-lab
 Title:	       "Laboratory Study Types"
 // TODO: Description should be adjusted according to the final set of study types.
 Description:   """Laboratory Study Types

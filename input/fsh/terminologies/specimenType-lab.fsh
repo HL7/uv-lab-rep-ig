@@ -1,5 +1,5 @@
-ValueSet:      LabSpecimenTypesEuVs
-Id:	       lab-specimenType-uv-lab
+ValueSet:      LabSpecimenTypesVs
+Id:	       specimenType-uv-lab
 Title:	       "Specimen Types"
 Description:   """Laboratory Specimen Types"""
 

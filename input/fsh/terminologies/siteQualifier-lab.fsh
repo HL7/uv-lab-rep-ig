@@ -1,5 +1,5 @@
-ValueSet:      LabSiteQualifierEuVs
-Id:	       lab-siteQualifier-uv-lab
+ValueSet:      LabSiteQualifierVs
+Id:	       siteQualifier-uv-lab
 Title:	       "Body Structure Qualifier"
 Description:   "Body Structure site qualifier. It indicates the body site qualifier from which a laboratory specimen is collected. (based on SNOMED CT)"
 
@@ -11,7 +11,7 @@ Description:   "Body Structure site qualifier. It indicates the body site qualif
 * insert SetFmmandStatusRule ( 2, trial-use)
 
 //* include codes from valueset $BodystructureLocationQualifierR5
-//* exclude codes from valueset LabLateralityEuVs
+//* exclude codes from valueset LabLateralityVs
 * $sct#7771000 "Left (qualifier value)"
 * $sct#24028007 "Right (qualifier value)"
 * $sct#51440002 "Bilateral (qualifier value)"

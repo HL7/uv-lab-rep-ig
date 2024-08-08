@@ -1,5 +1,5 @@
 CodeSystem: LaboratoryLocalCS
-Id: lab-localCs-uv-lab
+Id: localCs-uv-lab
 Title: "Laboratory Code: example"
 Description: "List of local coded concepts used for supporting the examples defined in this guide."
 * ^url = "http://example.org/lab-codes"

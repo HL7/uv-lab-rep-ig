@@ -1,5 +1,5 @@
-ValueSet:      LabSpeciesTypesEuVs
-Id:	       lab-speciesType-uv-lab-vs
+ValueSet:      LabSpeciesTypesUvLab
+Id:	       speciesType-uv-lab
 Title:	       "Types of species"
 Description:   """Types of animal species for non-human subjects"""
 

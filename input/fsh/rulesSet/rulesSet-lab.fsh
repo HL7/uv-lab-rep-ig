@@ -4,7 +4,7 @@ RuleSet: ReportAuthorRule
 RuleSet: ReportStatusRule
 * status /* obeys labRpt-status */
   * ^short = "Status of the Report" // add voc binding aligned with DiagReprt
-  * ^comment = "DiagnosticReport.status and Composition.status shall be aligned, based on the http://hl7.org/fhir/uv/laboratory/ConceptMap/ConceptMap-uv-lab-diagRptStatus2CompStatus mapping"
+  * ^comment = "DiagnosticReport.status and Composition.status shall be aligned, based on the http://hl7.org/fhir/uv/laboratory/ConceptMap/ConceptMap-diagRptStatus2CompStatus-uv-lab mapping"
 
 
 RuleSet: ReportEncounterRule
@@ -38,7 +38,7 @@ RuleSet: ReportTypeRule (element)
 * {element} 1..
 /* * {element}  obeys labRpt-code */
 * {element}  only $CodeableConcept-uv-ips
-* {element}  from LabReportTypesEuVs (preferred) // value set to be revised add alternative value sets
+* {element}  from LabReportTypesVs (preferred) // value set to be revised add alternative value sets
   * ^short = "Type of (Laboratory) Report"
   * ^definition = "Specifies that it refers to a Laboratory Report"
   * ^comment = "At least one DiagnosticReport.code.coding and Composition.type.coding SHALL be equal"
@@ -66,7 +66,7 @@ RuleSet: ReportCategoryRule
 
 * category contains specialty 0..*
 * category[specialty] only $CodeableConcept-uv-ips
-* category[specialty] from LabSpecialtyEuVs
+* category[specialty] from LabSpecialtyVs
 * category[specialty]
   * ^short = "The clinical domain of the laboratory performing the observation (e.g. microbiology, toxicology, chemistry)"
   * ^definition = "Laboratory specialty is an attribute of any laboratory setting representing professional qualification of the laboratory to execute certain kind of laboratory tests."

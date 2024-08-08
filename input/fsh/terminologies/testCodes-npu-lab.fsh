@@ -1,5 +1,5 @@
 ValueSet: NpuVs
-Id: lab-obsCode-npu-uv-lab
+Id: obsCode-npu-uv-lab
 Title: "Laboratory Code: NPU"
 Description: "Laboratory observation codes based on the NPU code system."
 

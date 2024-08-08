@@ -1,5 +1,5 @@
 ValueSet: LoincVs
-Id: lab-obsCode-loinc-uv-lab
+Id: obsCode-loinc-uv-lab
 Title: "Laboratory Code: LOINC"
 Description: "Laboratory observation codes based on the LOINC code system."
 

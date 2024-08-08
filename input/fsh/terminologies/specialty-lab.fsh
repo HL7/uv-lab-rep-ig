@@ -1,5 +1,5 @@
-ValueSet:      LabSpecialtyEuVs
-Id:	       lab-specialty-uv-lab
+ValueSet:      LabSpecialtyVs
+Id:	       specialty-uv-lab
 Title:	       "Laboratory Specialty"
 Description:   """Laboratory Specialties.
 Notes:

@@ -46,7 +46,7 @@ This observation may represent the result of a simple laboratory test such as he
 * category[studyType] ^short = "The way of grouping of the test results into clinically meaningful domains (e.g. hematology study, microbiology study, etc.)"
 * category contains specialty 0..*
 * category[specialty] only $CodeableConcept-uv-ips
-* category[specialty] from LabSpecialtyEuVs
+* category[specialty] from LabSpecialtyVs
 * category[specialty] ^short = "The clinical domain of the laboratory performing the observation (e.g. microbiology, toxicology, chemistry)"
 
 * code

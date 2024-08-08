@@ -1,5 +1,5 @@
 ValueSet: LaboratoryResultStandardVs
-Id: lab-obsCode-uv-lab
+Id: obsCode-uv-lab
 Title: "Laboratory Code"
 Description: "Laboratory observation codes. List of Laboratory observation codes derived from the LOINC and NPU code systems."
 //-------------------------------------------------------------------------------------------

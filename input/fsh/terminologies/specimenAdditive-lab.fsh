@@ -1,5 +1,5 @@
 ValueSet:      LabSpecimenAdditiveUvLab
-Id:	       lab-specimenAdditive-uv-lab
+Id:	       specimenAdditive-uv-lab
 Title:	       "Specimen Additive"
 Description:   "List of the specimen additives. Additives are commonly added to the vacutainer tubes to preserve the specimen for laboratory analysis"
 

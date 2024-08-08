@@ -9,7 +9,7 @@ Description: """This profile defines how to represent Specimens in HL7 FHIR for 
 * . ^definition = "Laboratory specimen"
 
 * subject only Reference ( PatientUvLab or PatientAnimalUvLab or Group  or Device or Substance or Location)
-* type from LabSpecimenTypesEuVs (preferred)
+* type from LabSpecimenTypesVs (preferred)
 * type 0..1
   * ^comment = "If the specimen.type conveys information about the site the specimen has been collected from, then, if the bodySite if present it shall be coherent with the type."
 * parent only Reference(SpecimenUvLab)

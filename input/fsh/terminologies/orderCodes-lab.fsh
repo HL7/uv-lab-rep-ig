@@ -1,5 +1,5 @@
-ValueSet: LabOrderCodesEuVs
-Id: lab-orderCodes-uv-lab
+ValueSet: LabOrderCodesVs
+Id: orderCodes-uv-lab
 Title: "Laboratory Order"
 Description: "List of LOINC Laboratory codes of type 'Order' or 'Both. This value set is built upon the IPS value set 'Results Laboratory Observation - IPS'"
 

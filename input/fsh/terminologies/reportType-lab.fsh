@@ -1,5 +1,5 @@
-ValueSet:      LabReportTypesEuVs
-Id:	       lab-reportType-uv-lab
+ValueSet:      LabReportTypesVs
+Id:	       reportType-uv-lab
 Title:	       "Laboratory Report Types"
 Description:   """Laboratory Report Types.
 This version includes only one code as suggested by the eHN guideline.
