@@ -1,17 +1,16 @@
 Profile: ObservationResultsLabUv
-// Parent: ObservationResultsEu
+// Parent: ObservationResultsUvLab
 Parent: Observation
 Id: Observation-resultslab-uv-lab
 Title:    "Observation Results: laboratory"
-Description: """This profile constrains the Observation resource to represent results produced by laboratory tests or panels/studies for the  HL7 Europe project.
+Description: """This profile constrains the Observation resource to represent results produced by laboratory tests or panels/studies for the  HL7 Uv Lab project.
 This observation may represent the result of a simple laboratory test such as hematocrit or it may group the set of results produced by a multi-test study or panel such as a complete blood count, a dynamic function test, a urine specimen study. In the latter case, the observation carries the overall conclusion of the study and or a global interpretation by the producer of the study, in the comment element; and references the atomic results of the study as "has-member" child observations.
 """
-// * ^publisher = "HL7 Europe"
-// * ^copyright = "HL7 Europe"
+
 * insert SetFmmandStatusRule ( 2, trial-use)
 * ^experimental = false
 * ^purpose = "This profile constrains the Observation resource to represent a laboratory in vitro diagnostic test or panel/study. In case of a panel/study, the results of the panel appear as sub-observations. In this case this top-level Observation acts as a grouper of all the observations belonging to the panel or study.  The top-level observation may carry a conclusion in the value element and or a global interpretation by the producer of the study, in the comment element."
-* insert ObservationResultsEu
+* insert ObservationResultsUvLab
 * obeys uv-lab-1
 * obeys uv-lab-2
 * . ^short = "Laboratory result for a simple test or for a panel/study"
@@ -43,7 +42,7 @@ This observation may represent the result of a simple laboratory test such as he
 * category[laboratory] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
 * category contains studyType 0..*
 * category[studyType] only $CodeableConcept-uv-ips
-* category[studyType] from LabStudyTypesEuVs
+* category[studyType] from LabStudyTypesVs
 * category[studyType] ^short = "The way of grouping of the test results into clinically meaningful domains (e.g. hematology study, microbiology study, etc.)"
 * category contains specialty 0..*
 * category[specialty] only $CodeableConcept-uv-ips
@@ -52,11 +51,11 @@ This observation may represent the result of a simple laboratory test such as he
 
 * code
 //* code from $results-laboratory-observations-uv-ips (preferred)
-* code from LaboratoryResultStandardEuVs (preferred)  // new binding to EU test codes VS
+* code from LaboratoryResultStandardVs (preferred)  // new binding to test codes VS
 * code ^definition = "Describes what was observed. Sometimes this is called the observation \"name\".  In this profile this code represents either a simple laboratory test or a laboratory study with multiple child observations"
 * code ^comment = "In the context of this Observation-laboratory-uv-ips profile, when the observation plays the role of a grouper of member sub-observations, the code represent the group (for instance a panel code). In case no code is available, at least a text shall be provided."
 * performer 1..
-* performer only Reference(PractitionerRoleEu or PractitionerEu or $Organization-uv-ips or CareTeam or PatientUvLab or RelatedPerson)
+* performer only Reference(PractitionerRoleUvLab or PractitionerUvLab or $Organization-uv-ips or CareTeam or PatientUvLab or RelatedPerson)
 
 
 * performer.extension contains $event-performerFunction named performerFunction 0..*
@@ -64,14 +63,14 @@ This observation may represent the result of a simple laboratory test such as he
 // * performer.extension[performerFunction] ^meaningWhenMissing = """The Performer Function is Participant"""
 
 * dataAbsentReason ^short = "Provides a reason why the expected value is missing."
-* insert ObservationResultsValueEu
+* insert ObservationResultsValueUvLab
 * interpretation only $CodeableConcept-uv-ips
 * method ^definition = "Laboratory technigue that has been used"
 * method ^comment = "Laboratory technique (method of measurement) are integral parts of the test specification of some laboratory test coding systems (e.g. NPU), in LOINC hovewer measurement principle is not always present in the test definition. In some cases however knowledge of the used measurment techique is important for proper interpretation of the test result.
 That's why it is important to explicitly include informaiton about measurement method is such cases."
 * method only $CodeableConcept-uv-ips
-* method from LabTechniqueEuVs (preferred) // added binding to an agreed eu lab measurement method value set
-* specimen only Reference(SpecimenEu)
+* method from LabTechniqueVs (preferred) // added binding to an agreed lab measurement method value set
+* specimen only Reference(SpecimenUvLab)
   * ^comment = "When the specimen is applicable and known it shall be documented"
 // * hasMember only Reference(ObservationResultsLabUv or ObservationResultsEu)
 * device ^short = "Measuring instrument"
@@ -84,7 +83,7 @@ That's why it is important to explicitly include informaiton about measurement m
 * component
   * code only $CodeableConcept-uv-ips
   * code from $results-laboratory-observations-uv-ips (preferred)
-  * insert ObservationResultsValueEu
+  * insert ObservationResultsValueUvLab
 
 Invariant: uv-lab-1
 Description: "If observation status is other then \"registered\" or \"cancelled\", at least one of these Observation elements shall be provided:  \"value\", \"dataAbsentReason\", \"hasMember\" or \"component\""

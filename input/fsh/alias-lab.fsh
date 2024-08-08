@@ -2,13 +2,13 @@
 
 // Actor Canonical
 
-Alias: $server = http://hl7.eu/fhir/laboratory/actor-repos-uv-lab
-Alias: $creator = http://hl7.eu/fhir/laboratory/actor-creator-uv-lab
-Alias: $consumer = http://hl7.eu/fhir/laboratory/actor-consumer-uv-lab
+Alias: $server = http://hl7.org/fhir/uv/laboratory/actor-repos-uv-lab
+Alias: $creator = http://hl7.org/fhir/uv/laboratory/actor-creator-uv-lab
+Alias: $consumer = http://hl7.org/fhir/uv/laboratory/actor-consumer-uv-lab
 
-// --- EU Lab Profiles
-Alias: $Composition-uv-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-uv-lab
-Alias: $Patient-uv-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-uv-lab
+// --- Lab Profiles
+Alias: $Composition-uv-lab = http://hl7.org/fhir/uv/laboratory/StructureDefinition/Composition-uv-lab
+Alias: $Patient-uv-lab = http://hl7.org/fhir/uv/laboratory/StructureDefinition/Patient-uv-lab
 
 // --- Code Systems
 Alias: $obligation-cs = http://hl7.org/fhir/CodeSystem/obligation
@@ -45,7 +45,6 @@ Alias: $results-coded-values-laboratory-uv-ips = http://hl7.org/fhir/uv/ips/Valu
 Alias: $iso3166-1-2 = http://hl7.org/fhir/ValueSet/iso3166-1-2
 
 // ---- Extensions
-Alias: $information-recipient = http://hl7.eu/fhir/StructureDefinition/information-recipient
 // Alias: $obligation = http://hl7.org/fhir/tools/StructureDefinition/obligation
 Alias: $obligation = http://hl7.org/fhir/StructureDefinition/obligation
 Alias: $humanname-mothers-family = http://hl7.org/fhir/StructureDefinition/humanname-mothers-family

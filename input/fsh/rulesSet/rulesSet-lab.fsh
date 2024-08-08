@@ -4,7 +4,7 @@ RuleSet: ReportAuthorRule
 RuleSet: ReportStatusRule
 * status /* obeys labRpt-status */
   * ^short = "Status of the Report" // add voc binding aligned with DiagReprt
-  * ^comment = "DiagnosticReport.status and Composition.status shall be aligned, based on the http://hl7.eu/fhir/laboratory/ConceptMap/ConceptMap-eu-diagRptStatus2CompStatus mapping"
+  * ^comment = "DiagnosticReport.status and Composition.status shall be aligned, based on the http://hl7.org/fhir/uv/laboratory/ConceptMap/ConceptMap-uv-lab-diagRptStatus2CompStatus mapping"
 
 
 RuleSet: ReportEncounterRule
@@ -21,7 +21,7 @@ RuleSet: ReportSubjectRule
 * subject 1..
 * subject /* obeys labRpt-subject */
 // * subject only Reference (PatientUvLab or Patient or Group or Location or Device)
-* subject only Reference (PatientUvLab or PatientAnimalEu or Group or Location or Device)
+* subject only Reference (PatientUvLab or PatientAnimalUvLab or Group or Location or Device)
   * ^short = "Who and/or what this report is about"
   * ^definition = "Who or what this report is about. The report can be about a human patient, a living subject, a device (e.g. a machine), a location or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure)."
   * ^comment = "DiagnosticReport and Composition SHALL have the same subject"
@@ -56,7 +56,7 @@ RuleSet: ReportCategoryRule
 * category ^definition = "A code that classifies this laboratory report. Two basic categories has been selected in this guide: laboratory specialty and Study type. Laboratory specialty is characteristic of the laboratory that produced the test result while Study type is an arbitrary classificion of the test type."
 * category contains studyType 0..*
 * category[studyType] only $CodeableConcept-uv-ips
-* category[studyType] from LabStudyTypesEuVs
+* category[studyType] from LabStudyTypesVs
 * category[studyType]
   * ^short = "The way of grouping of the test results into clinically meaningful domains (e.g. hematology study, microbiology study, etc.)"
   * ^definition = "Laboratory services, i.e., results of tests performed, could be characterized using typology of services, commonly called study types. Study type could be seen as an attribute or grouping mechanism that assigns a common clinical sense to certain types of laboratory test results., e.g., Hemoglobin, Platelet count, etc. belongs to 'Hematology study'."

@@ -96,7 +96,7 @@ Usage: #inline
 * valueCodeableConcept.text = "A"
 
 Instance: Inline-Specimen-laboratory-results-report-poc
-InstanceOf: SpecimenEu
+InstanceOf: SpecimenUvLab
 Usage: #inline
 * id = "cadaf2e3-b707-4207-9b63-5c29ffece051"
 * status = #available

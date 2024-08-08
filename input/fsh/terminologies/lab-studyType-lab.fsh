@@ -1,7 +1,7 @@
-ValueSet:      LabStudyTypesEuVs
+ValueSet:      LabStudyTypesVs
 Id:	       lab-studyType-uv-lab
 Title:	       "Laboratory Study Types"
-// TODO: Description should be adjusted according to the final set of EU study types.
+// TODO: Description should be adjusted according to the final set of study types.
 Description:   """Laboratory Study Types
 Notes:
 Note 1:26436-6 (Laboratory studies) enables issuing a report putting together observations from multiple specialties (disciplines) in the same text block, allowing delivery of a global interpretation comment at the end of the text block that will be rendered at the end of the report.
@@ -13,7 +13,7 @@ Note 3:Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) or 18727-8 (SE
 * insert LOINCCopyrightForVS
 * insert SetFmmandStatusRule ( 2, trial-use)
 
-// Following set of codes represent agreement between several EU member states on common set of laboratory study types. Other codes from XD-LAB profile were commented out.
+// Following set of codes represent agreement between several EU member states on a common set of laboratory study types. Other codes from XD-LAB profile were commented out.
 * $loinc#18717-9 "Blood bank studies (set)"
 //* $loinc#18718-7 "Cell marker studies (set)"
 * $loinc#18719-5 "Chemistry studies (set)"

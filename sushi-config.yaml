@@ -1,4 +1,3 @@
-# id: hl7.fhir.eu.uv-laboratory
 id: hl7.fhir.uv.lab-report
 canonical: http://hl7.org/fhir/uv/lab-report
 name:  Hl7LaboratoryReportIg
@@ -14,11 +13,11 @@ version: 1.0.0-ballot #
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
 releaseLabel: STU 1 Ballot # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
-# license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
+license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # https://www.hl7.org/fhir/valueset-jurisdiction.html
 
 
-jurisdiction: 	http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World" # urn:iso:std:iso:3166#EU
+jurisdiction: 	http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 
 # 
 publisher:
@@ -35,16 +34,9 @@ publisher:
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-  # hl7.fhir.uv.ips: current
   hl7.fhir.uv.ips: 1.1.0
   hl7.fhir.extensions.r5: 4.0.1
-  hl7.fhir.eu.extensions: 0.1.0
-
-#   hl7.fhir.us.mcode:
-#     id: mcode
-#     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
-#     version: 1.0.0
-#
+  hl7.fhir.extensions.r4: 4.0.1
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
 # auto-generate the page list, but if the author includes pages in
@@ -105,10 +97,7 @@ pages:
 parameters: #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
 #  produce-jekyll-data: true
   special-url:
-    - http://hl7.eu/fhir/StructureDefinition/information-recipient
-    - http://hl7.eu/fhir/StructureDefinition/composition-basedOn-order-or-requisition
     - http://example.org/lab-codes
-
 
 # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
 # path-resource:
@@ -322,7 +311,7 @@ resources:
   # -------------  Obligations
   StructureDefinition/Patient-obl-uv-lab:
     name: Patient Obligations
-    description: Specify the functional capabilities that the defined actors may, should or shall applied to the Patient EU Lab profile elements.
+    description: Specify the functional capabilities that the defined actors may, should or shall applied to the Patient profile elements.
 
   StructureDefinition/Specimen-obl-uv-lab:
     name: Specimen Obligations

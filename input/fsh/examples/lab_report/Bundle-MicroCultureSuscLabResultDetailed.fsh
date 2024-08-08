@@ -144,7 +144,7 @@ Usage: #inline
 
 
 Instance: Inline-Specimen-micro
-InstanceOf: SpecimenEu
+InstanceOf: SpecimenUvLab
 Usage: #inline
 * id = "bab0016e-1800-4e54-b595-72bd9041ffbc"
 * status = #available

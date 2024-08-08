@@ -1,8 +1,9 @@
 ### Authors and Contributors
 
-This guide is the result of a multi  stakeholders effort involving different experts from several European countries, projects (e.g. XpanDH) and initiatives (e.g. MyHealth@EU); organized in two collaborating sub-groups:
+This guide is the result of a multi stakeholder effort involving different experts from several European countries, projects (e.g. XpanDH) and initiatives (e.g. MyHealth@EU); organized in two collaborating sub-groups:
 - one focusing on semantic and functional requirements, and
 - one working on the HL7 FHIR specifications
+With further work done on internationalizing and re-balloting the specification in the universal realm by the HL7 International Orders and Observations Work group.
 
 The following picture provide an overview of the origin of the participants.
 
@@ -16,9 +17,9 @@ The following picture provide an overview of the origin of the participants.
 |------------------|------------------|-------------|
 | Project facilitator|  Hynek Kružík | HL7 CZ/Europe |
 | Project facilitator|  Giorgio Cangioli | HL7 IT/Europe |
+| HL7 International Project Facilitator and Author |  Robert Hausam   | Hausam Consulting, US (HL7 OO WG Co-chair) |
 | Author |  Alexander Henket   | NICTIZ, HL7 NL |
-| Author |  Robert Hausam   | Hausam Consulting, US |
-| Author |  Ulrike Merrick  | APHL, US |
+| Author |  Ulrike Merrick  | APHL, US (HL7 OO WG Co-chair) |
 | Author |  Daniel Karlsson | E-hälsomyndigheten, HL7 SE |
 | Author |  Oliver Egger  |  ahdis, HL7 CH |
 | Author |  Gabriel Kleinoscheg | ELGA, HL7 AT |

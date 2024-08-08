@@ -1,8 +1,9 @@
 Profile: CompositionLabReportUv
-Parent: http://hl7.org/fhir/StructureDefinition/clinicaldocument
+Parent: Composition
+//Parent: http://hl7.org/fhir/StructureDefinition/clinicaldocument
 Id: Composition-uv-lab
 Title: "Composition: Laboratory Report"
-Description: "Clinical document used to represent a Laboratory Report for the scope of the HL7 Europe project."
+Description: "Clinical document used to represent a Laboratory Report for the scope of the HL7 Uv Lab project."
 * insert SetFmmandStatusRule ( 2, trial-use)
 * . ^short = "Laboratory Report composition"
 * . ^definition = "Laboratory Report composition.
@@ -11,8 +12,8 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * extension contains CompositionBasedOnOrderOrRequisition named basedOn-order-or-requisition 0..*
 * extension[basedOn-order-or-requisition].valueReference only Reference(ServiceRequestLabUv)
 
-* extension contains $information-recipient named information-recipient 0..*
-* extension[information-recipient].valueReference only Reference(PractitionerEu or Device or PatientUvLab or RelatedPerson or PractitionerRoleEu or Organization)
+* extension contains InformationRecipient named information-recipient 0..*
+* extension[information-recipient].valueReference only Reference(PractitionerUvLab or Device or PatientUvLab or RelatedPerson or PractitionerRoleUvLab or Organization)
 
 * extension contains DiagnosticReportReference named diagnosticReport-reference 0..1
 * extension[diagnosticReport-reference].valueReference only Reference(DiagnosticReportLabUv)
@@ -96,10 +97,10 @@ Variant 2: Text and Entry - With this option, the Laboratory Specialty Section t
 // -------------------------------------
 * section contains lab-no-subsections ..* // check if ..1 or ..*
 * section[lab-no-subsections]
-  * ^short = "Variant 1: EU Laboratory Report section with entries and no sub-sections"
+  * ^short = "Variant 1: Laboratory Report section with entries and no sub-sections"
   * ^definition = """Variant 1: With this option, all laboratory report data entries are provided in the top level sections and no sub-sections are allowed."""
   * insert SectionElementsRules
-/*   * code from LabStudyTypesEuVs (preferred)
+/*   * code from LabStudyTypesVs (preferred)
   * text ^short = "Text summary of the section, for human interpretation."
   * entry only Reference (ObservationResultsLabUv or DiagnosticReport)
   * entry 1..
@@ -110,10 +111,10 @@ Variant 2: Text and Entry - With this option, the Laboratory Specialty Section t
 // -------------------------------------
 * section contains lab-subsections ..* // check if ..1 or ..*
 * section[lab-subsections]
-  * ^short = "Variant 2: EU Laboratory Report section with one to many subsections Laboratory Report Item"
+  * ^short = "Variant 2: Laboratory Report section with one to many subsections Laboratory Report Item"
   * ^definition = """Variant 2: With this option, this top level section doesn't include NEITHER a top level text NOR entry elements. Each Report Item is contained in a corresponding sub-sections which contains the Lab Report Data Entry."""
   * code only $CodeableConcept-uv-ips
-  * code from LabStudyTypesEuVs (preferred)
+  * code from LabStudyTypesVs (preferred)
   * text 0..0
   * entry 0..0
   * insert SectionCommonRules
@@ -121,7 +122,7 @@ Variant 2: Text and Entry - With this option, the Laboratory Specialty Section t
 /*     * code 1..
     * code only $CodeableConcept-uv-ips */
     * insert SectionElementsRules
-    * code from LabStudyTypesEuVs (preferred)
+    * code from LabStudyTypesVs (preferred)
 /*        * text ^short = "Text summary of the section, for human interpretation."
     * entry 1..
     * entry only Reference (ObservationResultsLabUv)

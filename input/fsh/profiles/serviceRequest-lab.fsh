@@ -11,9 +11,9 @@ Description: """This profile defines how to represent an laboratory orders using
 * identifier 1..
 * code from LabOrderCodesEuVs (preferred)
 * subject 1..
-* subject only Reference (PatientUvLab or PatientAnimalEu or Group or Location or Device)
+* subject only Reference (PatientUvLab or PatientAnimalUvLab or Group or Location or Device)
 * requisition ^short = "Composite Request ID."
-* specimen	only Reference (SpecimenEu)
+* specimen	only Reference (SpecimenUvLab)
   * ^short = "Specimens to be used by the laboratory procedure"
   * ^comment = """If the specimen information are known when the order is created then the ServiceRequest.specimen should be used.
 If the ServiceRequest can be updated when the specimen is collected then the ServiceRequest.specimen or the Specimen.request could be used.

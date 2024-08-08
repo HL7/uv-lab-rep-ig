@@ -1,4 +1,4 @@
-Profile: ServiceRequestEuObligations
+Profile: ServiceRequestUvLabObligations
 Parent: ServiceRequestLabUv
 Id: ServiceRequest-obl-uv-lab
 Title:    "ServiceRequest: Obligations"

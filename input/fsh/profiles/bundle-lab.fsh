@@ -41,12 +41,6 @@ Description: "A laboratory report bundle SHALL include one and only one Diagnost
 Expression: "entry.resource.ofType(DiagnosticReport).count() = 1"
 Severity:    #error
 
-Invariant: dr-to-comp-link
-Description: "The DiagnosticReport included in a laboratory report bundle SHALL always refers a composition"
-Expression: "entry.resource.ofType(DiagnosticReport).extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition').exists()"
-// EXPRESSION TO BE CHECKED
-Severity:    #error
-
 //==========================
 // PROFILE
 //==========================
@@ -55,9 +49,8 @@ Profile: BundleLabReportUv
 Parent: Bundle
 Id: Bundle-uv-lab
 Title: "Bundle: Laboratory Report"
-Description: "Clinical document used to represent a Laboratory Report for the scope of the HL7 Europe project."
-// * ^publisher = "HL7 Europe"
-// * ^copyright = "HL7 Europe"
+Description: "Clinical document used to represent a Laboratory Report for the scope of the HL7 Uv Lab Report project."
+
 * insert SetFmmandStatusRule ( 2, trial-use)
 * . ^short = "Laboratory Report bundle"
 * . ^definition = "Laboratory Report bundle."
@@ -69,7 +62,6 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * obeys dr-comp-category
 * obeys dr-comp-subj
 * obeys dr-comp-enc
-* obeys dr-to-comp-link // expresssion to be checked
 
 
 * identifier ^short = "Business identifier for this Laboratory Report"
@@ -100,13 +92,13 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * entry[diagnosticReport].resource only DiagnosticReportLabUv
 
 * entry contains patient 0..1
-* entry[patient].resource only Patient or PatientUvLab or PatientAnimalEu
+* entry[patient].resource only Patient or PatientUvLab or PatientAnimalUvLab
 
 * entry contains observation 0..*
 * entry[observation].resource only ObservationResultsLabUv
 
 * entry contains specimen 0..*
-* entry[specimen].resource only SpecimenEu
+* entry[specimen].resource only SpecimenUvLab
 
 * entry contains serviceRequest 0..*
 * entry[serviceRequest].resource only ServiceRequestLabUv
@@ -115,10 +107,10 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * entry[organization].resource only Organization
 
 * entry contains practitioner 0..*
-* entry[practitioner].resource only PractitionerEu
+* entry[practitioner].resource only PractitionerUvLab
 
 * entry contains practitionerRole 0..*
-* entry[practitionerRole].resource only PractitionerRoleEu
+* entry[practitionerRole].resource only PractitionerRoleUvLab
 
 * entry contains bodyStructure 0..*
 * entry[bodyStructure].resource only BodyStructureUvLab

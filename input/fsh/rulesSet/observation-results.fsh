@@ -1,4 +1,4 @@
-RuleSet: ObservationResultsEu
+RuleSet: ObservationResultsUvLab
 //  insert SetFmmandStatusRule ( 2, trial-use)
 * status ^short = "Status of this observation (e.g. preliminary, final,...)"
 * category only $CodeableConcept-uv-ips
@@ -6,21 +6,21 @@ RuleSet: ObservationResultsEu
 // * code MS
 * subject 1..
 // * subject only Reference(Patient or PatientUvLab or Group or Device or Location)
-* subject only Reference(PatientAnimalEu or PatientUvLab or Group or Device or Location)
+* subject only Reference(PatientAnimalUvLab or PatientUvLab or Group or Device or Location)
 * subject.reference 1..
 * effective[x] 1..
 * effective[x] only dateTime or Period
 * effective[x].extension contains $ext-data-absent-reason named data-absent-reason 0..1
 * effective[x].extension[data-absent-reason] ^short = "effective[x] absence reason"
 * effective[x].extension[data-absent-reason] ^definition = "Provides a reason why the effectiveTime is missing."
-* performer only Reference(PractitionerEu or PractitionerRoleEu or $Organization-uv-ips or CareTeam or PatientUvLab or RelatedPerson)
+* performer only Reference(PractitionerUvLab or PractitionerRoleUvLab or $Organization-uv-ips or CareTeam or PatientUvLab or RelatedPerson)
 // * value[x] MS
 // removed circular reference
-// * hasMember only Reference(ObservationResultsEu or Observation or QuestionnaireResponse or MolecularSequence)
+// * hasMember only Reference(ObservationResultsUvLab or Observation or QuestionnaireResponse or MolecularSequence)
 * hasMember only Reference(Observation or QuestionnaireResponse or MolecularSequence)
 * component ^short = "Laboratory result"
 
-RuleSet: ObservationResultsValueEu
+RuleSet: ObservationResultsValueUvLab
 //* value[x]
 * extension contains $observation-value-r5 named value-r5 0..1
 * extension[value-r5]

@@ -1,10 +1,26 @@
+//===================================
+/// INVARIANTS
+//===================================
+
+Invariant: dr-to-comp-link
+Description: "The DiagnosticReport included in a laboratory report bundle SHALL always refer to a composition"
+Expression: "extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition').exists()"
+//Expression: "entry.resource.ofType(DiagnosticReport).extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition').exists()"
+Severity:    #error
+
+//==========================
+// PROFILE
+//==========================
+
 Profile: DiagnosticReportLabUv
 Parent: DiagnosticReport
 Id: DiagnosticReport-uv-lab
 Title: "DiagnosticReport: Laboratory Report"
-Description: "DiagnosticReport used to represent an entry of a Laboratory Report, including its context, for the scope of the HL7 Europe project."
-// * ^publisher = "HL7 Europe"
-// * ^copyright = "HL7 Europe"
+Description: "DiagnosticReport used to represent an entry of a Laboratory Report, including its context, for the scope of the HL7 Uv Lab project."
+
+
+* obeys dr-to-comp-link
+
 * insert SetFmmandStatusRule ( 2, trial-use)
 * . ^short = "Laboratory Report DiagnosticReport"
 * . ^definition = "Laboratory Report DiagnosticReport"
@@ -37,11 +53,6 @@ Annotation Comment
 
 * insert ReportStatusRule
 
-/* //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Commented based on the suggestion form the 2023-05-26 meeting see https://github.com/hl7-eu/laboratory/issues/11 
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-* basedOn.extension contains DiagnosticReportBasedOnRequisition named basedOn-requisition 0..* */
-
 * identifier
   * ^comment = "Usually assigned by the Information System of the diagnostic service provider for facilitating the Report search. The order id can be used as one of the Report identifier if only one report is produced for that order."
   
@@ -54,7 +65,7 @@ Commented based on the suggestion form the 2023-05-26 meeting see https://github
 * code ^binding.extension.extension[0].url = "purpose"
 * code ^binding.extension.extension[=].valueCode = #candidate
 * code ^binding.extension.extension[+].url = "valueSet"
-* code ^binding.extension.extension[=].valueCanonical = LabStudyTypesEuVs
+* code ^binding.extension.extension[=].valueCanonical = LabStudyTypesVs
 * code ^binding.extension.extension[+].url = "documentation"
 * code ^binding.extension.extension[=].valueMarkdown = """Laboratory Specialties."""
 * code ^binding.extension.url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
@@ -70,7 +81,7 @@ Commented based on the suggestion form the 2023-05-26 meeting see https://github
 * resultsInterpreter
   * insert ReportAuthorRule
   /* * obeys labRpt-author */
-* specimen only Reference (SpecimenEu)
+* specimen only Reference (SpecimenUvLab)
   * ^short = "Specimens this report is based on."
 * result only Reference (ObservationResultsLabUv)
   * ^short = "results" 

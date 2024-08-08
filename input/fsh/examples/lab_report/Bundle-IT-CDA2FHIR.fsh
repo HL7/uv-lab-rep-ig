@@ -83,7 +83,7 @@ Usage: #inline
 * identifier.assigner.display = "Regione Lazio"
 * status = #final
 * category[studyType] = $loinc#18719-5 "Chemistry studies (set)"
-* type = http://loinc.org#11502-2 "Laboratory report"
+* type = $loinc#11502-2 "Laboratory report"
 * type.text = "Referto di laboratorio"
 * subject = Reference(urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04)
 * encounter = Reference(urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a)
@@ -104,10 +104,10 @@ Usage: #inline
 * event.period.start = "2022-03-24T11:24:26+01:00"
 * event.detail = Reference(urn:uuid:1b4b120e-0371-4878-b4c9-b69434e84c72)
 * section.title = "Esami delle Urine"
-* section.code = http://loinc.org#18729-4 "Urinalysis studies (set)"
+* section.code = $loinc#18729-4 "Urinalysis studies (set)"
 * section.code.text = "ESAMI DELLE URINE"
 * section.section.title = "Albumina nelle Urine"
-* section.section.code.coding[+] = http://loinc.org#14957-5 "Microalbumin [Mass/volume] in Urine"
+* section.section.code.coding[+] = $loinc#14957-5 "Microalbumin [Mass/volume] in Urine"
 * section.section.code.coding[+] = urn:oid:2.16.840.1.113883.2.9.2.30.6.11#0090334.02 "Microalbumina"
 * section.section.code.text = "Microalbumin Massa/Volume in Urine"
 * section.section.text.status = #generated
@@ -126,7 +126,7 @@ Usage: #inline
 * status = #registered
 /* * category = $v2-0074#LAB "Laboratory" */
 * category[studyType] = $loinc#18719-5 "Chemistry studies (set)"
-* code = http://loinc.org#11502-2 "Laboratory report"
+* code = $loinc#11502-2 "Laboratory report"
 * code.text = "Referto di laboratorio"
 * subject = Reference(urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04)
 * encounter = Reference(urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a)
@@ -378,7 +378,7 @@ Usage: #inline
 * intent = #order
 * category = $sct#108252007 "Laboratory procedure"
 * priority = #asap
-* code = http://loinc.org#14957-5 "Microalbumin [Mass/volume] in Urine"
+* code = $loinc#14957-5 "Microalbumin [Mass/volume] in Urine"
 * code.text = "Microalbumin Massa/Volume in Urine"
 * subject = Reference(urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04)
 * encounter = Reference(urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a)
@@ -470,7 +470,7 @@ Usage: #inline
 * id = "763f7902-8103-4d10-8bd1-546a726d43ee"
 * status = #final
 * category = $observation-category#laboratory
-* code.coding[+] = http://loinc.org#14957-5 "Microalbumin [Mass/volume] in Urine"
+* code.coding[+] = $loinc#14957-5 "Microalbumin [Mass/volume] in Urine"
 * code.coding[+] = urn:oid:2.16.840.1.113883.2.9.2.30.6.11#0090334.02 "Albumina nelle urine"
 * code.text = "Microalbumin Massa/Volume in Urine"
 * subject = Reference(urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04)

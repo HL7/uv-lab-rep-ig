@@ -1,4 +1,4 @@
-Profile: ObservationEuObligations
+Profile: ObservationUvLabObligations
 Parent: ObservationResultsLabUv
 Id: Observation-obl-uv-lab
 Title:    "Observation: Obligations"

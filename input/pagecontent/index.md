@@ -39,8 +39,7 @@ This guide is not limited to test results performed by clinical laboratories on 
 ### Purpose
 The goal of this Implementation Guide is to define a universal standard for the Laboratory Report to facilitate the harmonization among worldwide initiatives and minimizing unnecessary variations across realms.
 
-This project use as starting point the [HL7 Europe Laboratory Report FHIR IG](https://hl7.eu/fhir/laboratory) and other existing guides; and it aims to be realized in collaboration with the IHE PALM community.
-
+This project used the [HL7 Europe Laboratory Report FHIR IG](https://hl7.eu/fhir/laboratory) and other existing guides as a starting point; and it aims to be realized in collaboration with the IHE PALM community.
 
 ### Design choices
 

@@ -1,10 +1,9 @@
-Profile: PatientEuObligations
+Profile: PatientUvLabObligations
 Parent: PatientUvLab
 Id: Patient-obl-uv-lab
 Title:    "Patient: Obligations"
 Description: "This profile defines obligations for an human Patient in FHIR for the purpose of this guide."
-// * ^publisher = "HL7 Europe"
-// * ^copyright = "HL7 Europe"
+
 * insert SetFmmandStatusRule ( 0, informative)
 
 // TEST OBLIGATIONS  ====>

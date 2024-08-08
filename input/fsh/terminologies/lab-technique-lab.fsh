@@ -1,4 +1,4 @@
-ValueSet:      LabTechniqueEuVs
+ValueSet:      LabTechniqueVs
 Id:	       lab-technique-uv-lab
 Title:	       "Laboratory Techniques"
 Description:   "Laboratory technique (method of measurement) used for the result measurement (based on SNOMED CT)."

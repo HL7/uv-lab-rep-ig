@@ -8,8 +8,7 @@ Note 2: Many European countries are using additional laboratory specialty types,
 Note 3: In case of documented need, this value set could be extended."""
 
 //  * ^experimental = false
-// * ^publisher = "HL7 Europe"
-// * ^copyright = "HL7 Europe"
+
 * insert SNOMEDCopyrightForVS
 * insert SetFmmandStatusRule ( 2, trial-use)
 * $sct#394596001    "Chemical pathology"

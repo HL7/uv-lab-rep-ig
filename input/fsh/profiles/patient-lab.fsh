@@ -10,12 +10,12 @@ When the ips-pat-1 invariant is satisfied \(Patient.name.given, Patient.name.fam
 * extension contains
     $patient-birthPlace named birthPlace 0..1 and
     $sexForClinicalUse named sex-for-clinical-use 0..*
-* extension[birthPlace].valueAddress // only AddressEu
+* extension[birthPlace].valueAddress // only AddressUvLab
 
 * identifier ^short = "Patient identifiers" // MS according to IPS
 
 * name 1..* // MS according to IPS
-* name obeys eu-pat-1
+* name obeys uv-lab-pat-1
 * name ^requirements = "Need to be able to track the patient by multiple names. Examples are your official name and a partner name.\r\nThe Alphabetic representation of the name SHALL be always provided"
 * name.extension contains $ext-data-absent-reason named name-absent-reason 0..*
 * name.extension[name-absent-reason] ^short = "Reason for not providing the name"
@@ -34,15 +34,15 @@ When the ips-pat-1 invariant is satisfied \(Patient.name.given, Patient.name.fam
 * gender ^short = "Administrative Gender" // MS according to IPS
 * birthDate 1.. // MS according to IPS
 // * address MS
-/* * address only AddressEu // MS according to IPS
+/* * address only AddressUvLab // MS according to IPS
 * address obeys pat-cnt-2or3-char */
 * contact.relationship only $CodeableConcept-uv-ips
 * contact.relationship ^short = "Relationship between a patient and a contact person for that patient"
-* contact.address ^short =  "Contact Address" // only AddressEu
+* contact.address ^short =  "Contact Address" // only AddressUvLab
 * generalPractitioner ^short = "Patient's nominated care provider" // MS according to IPS
 
 
-Invariant: eu-pat-1
+Invariant: uv-lab-pat-1
 Description: "given, family, text or a data-absent-reason extension SHALL be present"
 Severity: #error
 Expression: "family.exists() or given.exists() or text.exists() or extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()"

@@ -5,8 +5,7 @@ Description:   "Body Structure site qualifier. It indicates the body site qualif
 
 
 // * ^experimental = false
-// * ^publisher = "HL7 Europe"
-// * ^copyright = "HL7 Europe"
+
 
 * insert SNOMEDCopyrightForVS
 * insert SetFmmandStatusRule ( 2, trial-use)

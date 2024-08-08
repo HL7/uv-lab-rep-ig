@@ -65,7 +65,7 @@ Usage: #example
 
 
 /* Instance: Specimen-micro
-InstanceOf: SpecimenEu
+InstanceOf: SpecimenUvLab
 Usage: #example
 * id = "bab0016e-1800-4e54-b595-72bd9041ffbc"
 * status = #available
@@ -266,13 +266,13 @@ Usage: #example
 * valueCodeableConcept = $sct#264868006 "No growth"
 
 Instance: prrole-lab-example
-InstanceOf: PractitionerRoleEu
+InstanceOf: PractitionerRoleUvLab
 Usage: #example
 /* * id = "88868d3e-7ab1-4ee5-983e-b979c4971f5c" */
 * practitioner = Reference(pr-lab-example)
 
 Instance: pr-lab-example
-InstanceOf: PractitionerEu
+InstanceOf: PractitionerUvLab
 Usage: #example
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.3.2"
 * identifier.value = "MTCORV58E63L294G"
