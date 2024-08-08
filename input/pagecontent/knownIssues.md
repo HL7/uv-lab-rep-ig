@@ -17,6 +17,6 @@ This is due to a required used code, not present in the R4 value set version.
 ### Not endorsed canonical url
 
 
-The [Laboratory Certified Reference Material](ValueSet-lab-certifiedRefMaterial-uv-lab.html) value set includes concepts that are derived from systems not having canonical urls assigned and/or confirmed by HL7 yet.
+The [Laboratory Certified Reference Material](ValueSet-certifiedRefMaterial-uv-lab.html) value set includes concepts that are derived from systems not having canonical urls assigned and/or confirmed by HL7 yet.
 
 Adopters should use these urls being aware that they may change.
