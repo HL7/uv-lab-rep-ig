@@ -1,25 +1,8 @@
-//===================================
-/// INVARIANTS
-//===================================
-
-Invariant: dr-to-comp-link
-Description: "The DiagnosticReport included in a laboratory report bundle SHALL always refer to a composition"
-Expression: "extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition').exists()"
-//Expression: "entry.resource.ofType(DiagnosticReport).extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition').exists()"
-Severity:    #error
-
-//==========================
-// PROFILE
-//==========================
-
 Profile: DiagnosticReportLabUv
 Parent: DiagnosticReport
 Id: DiagnosticReport-uv-lab
 Title: "DiagnosticReport: Laboratory Report"
 Description: "DiagnosticReport used to represent an entry of a Laboratory Report, including its context, for the scope of the HL7 Uv Lab project."
-
-
-* obeys dr-to-comp-link
 
 * insert SetFmmandStatusRule ( 2, trial-use)
 * . ^short = "Laboratory Report DiagnosticReport"

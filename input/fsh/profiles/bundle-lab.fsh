@@ -2,6 +2,11 @@
 /// INVARIANTS
 //===================================
 
+Invariant: dr-to-comp-link
+Description: "The DiagnosticReport included in a laboratory report bundle SHALL always refer to a composition"
+Expression: "entry.resource.ofType(DiagnosticReport).extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition').exists()"
+Severity:    #error
+
 Invariant: dr-comp-enc
 Description: "DiagnosticReport and Composition SHALL have the same encounter"
 /* Expression: "( (entry:composition.resource.encounter.empty() and entry:diagnosticReport.resource.encounter.empty() ) or entry:composition.resource.encounter = entry:diagnosticReport.resource.encounter )" */
@@ -55,6 +60,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * . ^short = "Laboratory Report bundle"
 * . ^definition = "Laboratory Report bundle."
 
+* obeys dr-to-comp-link
 * obeys one-comp
 * obeys one-dr
 * obeys dr-comp-identifier
