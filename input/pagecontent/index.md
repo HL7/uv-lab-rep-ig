@@ -13,8 +13,8 @@
 <div xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<blockquote class="stu-note">		
-		<p>This ballot version uses the HL7 Europe Laboratory Report FHIR IG as initial content.</p>		
-		<p>Balloters are requested to provide their feedbacks on the design approach followed in that guide, result of a compromize between the different business requirements and expectations, and the wish to contain the implementation options</p>
+		<p>This ballot version is based on the HL7 Europe Laboratory Report FHIR IG as the initial content.</p>		
+		<p>Balloters are requested to provide their feedback on the design approach taken in this IG (based on the prior EU work), particularly on the use of the FHIR 'document' Bundle containing both the Composition and DiagnosticReport resources for structuring and organizing the report.  This approach is the result of compromising between the business requirements that have been expressed for the report to be a valid clinical document (potentially with signature) and also searchable and accessible via the DiagnosticReport endpoint, as well as the desire to constrain the available options and promote standardization on a common implementation strategy.</p>
 	</blockquote>
 </div>
 
