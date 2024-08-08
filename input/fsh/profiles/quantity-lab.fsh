@@ -1,7 +1,7 @@
 Profile: QuantityUvLab
 Parent: Quantity-uv-ips
 Id: Quantity-uv-lab
-Title: "Quantity ( Uv Lab)"
+Title: "Quantity (Uv Lab)"
 Description: "This profile constrains the Quantity data type to use UCUM as the code system for units and optionally share measurement uncertainty"
 // * ^publisher = "HL7"
 * ^purpose = "This profile of the Quantity data type imposes the usage of the UCUM as the code system for units and allows expressing uncertainty of measurement"
@@ -28,7 +28,7 @@ Description: "Data type Range constrained to use UCUM as the code system for uni
 Profile: RatioUvLab
 Parent: Ratio-uv-ips
 Id: Ratio-uv-lab
-Title: "Ratio ( Uv Lab)"
+Title: "Ratio (Uv Lab)"
 Description: "This profile constrains the Ratio data type to use UCUM as the code system for units and optionally share measurement uncertainty"
 // * ^publisher = "HL7"
 * ^purpose = "This profile of the Ratio data type imposes the usage of the UCUM as the code system for units and allows expressing uncertainty of measurement"
