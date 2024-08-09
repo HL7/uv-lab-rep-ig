@@ -29,7 +29,7 @@ In brief:
 * A DiagnosticReport may refers a Composition. (Required for documents)
 * When present, the referred Composition:
   * defines the report structure, often just a single section;
-  * provides a mean for assembling the report as a document (i.e. as a Bundle of type 'document')
+  * provides a means for assembling the report as a document (i.e. as a Bundle of type 'document')
 * A document Bundle may be used to represent the legally signable report, including all the data defining the report.
 
 
