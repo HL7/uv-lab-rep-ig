@@ -9,7 +9,7 @@
   "descmd" : "This publication is for ballot of a new STU release (1.0.0).",
   "first" : true,
   "title" : "HL7 Laboratory Report",
-  "ci-build" : "https://build.fhir.org/ig/HL7/uv-lab-rep-ig/",
+  "ci-build" : "https://build.fhir.org/ig/HL7/uv-lab-rep-ig",
   "category" : "Orders and Observations",
   "introduction" : "This is a Universal realm FHIR Implementation Guide that facilitates global interoperability for laboratory reporting and harmonization among national and international (global) laboratory reporting initiatives.  The reporting approach is based on a FHIR Bundle with included resources based on a Composition resource for structuring the result data and enabling validation as a FHIR clinical document, and a DiagnosticReport resource providing for consistent REST-based querying and data retrieval.  The Bundle includes one or more Observation resources containing the laboratory result data, plus additional required resources (Patient, Specimen, etc.) for the complete representation of the laboratory report.  The IG scope is a set of HL7 FHIR rules for defining the representation of a Laboratory Report in the universal context in the core domains of in-vitro diagnostics (for example clinical biochemistry, haematology, immunohematology, microbiology, immunology, while currently not including more specialised laboratory domains such as histopathology and medical genetics). The focus is on common rules that apply to all of the in-scope domains.  The guide is not limited to the results of tests performed by clinical laboratories on human specimens (from a human subject), but it may also include the results of observations on non-human materials or living subjects, or non-human specimens paired with a human subject."
 }
