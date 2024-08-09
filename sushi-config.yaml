@@ -308,6 +308,14 @@ resources:
     name: "Patient: animal example"
     description: Example of Patient resource used for indicating an animal (cat) conforming this guide.
 
+  BodyStructure/bodystruct-example:
+    name: "BodyStructure: example"
+    description: Example of BodyStructure conforming this guide.
+
+  Substance/substance-example:
+    name: "Substance: example"
+    description: Example of Substance conforming this guide.
+
   # -------------  Obligations
   StructureDefinition/Patient-obl-uv-lab:
     name: Patient Obligations

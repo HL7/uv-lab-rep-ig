@@ -48,7 +48,7 @@ Usage: #example
 * section[lab-subsections].section[=].entry = Reference(obs-anaerobic-culture) // obs-anaerobic-culture
 
 Instance: pat-lab-example
-InstanceOf: PatientUvLab
+InstanceOf: PatientUvLabObligations
 Usage: #example
 * identifier[+].type = $v2-0203#NIIP
 * identifier[=].system = "urn:oid:1.2.203.24341.1.20.2"
@@ -86,7 +86,7 @@ Usage: #example
 * hasMember[+] = Reference(obs-gs-org1) // obs-gs-org1
 
 Instance: obs-wbc
-InstanceOf: ObservationResultsUvLab
+InstanceOf: ObservationUvLabObligations
 Usage: #example
 /* * id = "1097929f-890e-4e27-a31d-58599f3e2479" */
 * status = #final
@@ -297,7 +297,7 @@ Usage: #example
 * address.country = "100"
 
 Instance: srv-request-example
-InstanceOf: ServiceRequestUvLab
+InstanceOf: ServiceRequestUvLabObligations
 Usage: #example
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.3.9"
 * identifier.value = "[NRE]"
@@ -309,3 +309,21 @@ Usage: #example
 * code = http://loinc.org#14957-5 "Microalbumin [Mass/volume] in Urine"
 * code.text = "Microalbumin Massa/Volume in Urine"
 * subject = Reference(pat-lab-example)
+
+Instance: bodystruct-example
+InstanceOf: BodyStructureUvLab
+Usage: #example
+* active = false
+* morphology.text = "Skin patch"
+* location = http://snomed.info/sct#14975008 "Forearm"
+* locationQualifier = http://snomed.info/sct#419161000 "Unilateral left"
+* locationQualifier.text = "Left"
+* locationQualifier = http://snomed.info/sct#255549009 "Anterior"
+* locationQualifier.text = "Anterior"
+* patient = Reference(pat-lab-example)
+
+Instance: substance-example
+InstanceOf: SpecimenAdditiveSubstance
+Usage: #example
+* status = #active
+* code = http://snomed.info/sct#50045009 "Heparin sodium"

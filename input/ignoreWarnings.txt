@@ -50,3 +50,8 @@ WARNING: Bundle/SimpleChemistryResultReport: Bundle.entry[0].resource/*Compositi
 
 # The extension url for referencing the R5 DiagnosticReport.composition element is correct.  Per discussion with Brian Postlethwaite, the IG Publisher is not checking if the extension URL is a backport style references, which is needed to apply the correct logic (or it can use the backport package once it is completed).
 WARNING: StructureDefinition/Bundle-uv-lab: StructureDefinition.snapshot.element[0].constraint[9]: dr-to-comp-link: Reference to an unknown extension - double check that the URL 'http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition' is correct
+
+# The IG does include examples of these profiles in the Bundle and additional examples, so it is not clear why they are stated as having no explicitly linked examples (but these are information messages, not warnings or errors)
+INFORMATION: StructureDefinition.where(url = 'http://hl7.org/fhir/uv/lab-report/StructureDefinition/Patient-uv-lab'): The Implementation Guide contains no explicitly linked examples for this profile
+INFORMATION: StructureDefinition.where(url = 'http://hl7.org/fhir/uv/lab-report/StructureDefinition/ServiceRequest-uv-lab'): The Implementation Guide contains no explicitly linked examples for this profile
+INFORMATION: StructureDefinition.where(url = 'http://hl7.org/fhir/uv/lab-report/StructureDefinition/Specimen-uv-lab'): The Implementation Guide contains no explicitly linked examples for this profile

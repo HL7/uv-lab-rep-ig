@@ -187,7 +187,7 @@ Usage: #inline
 * location.location = Reference(urn:uuid:6373bbff-d136-4cfe-a7bc-fab4bff2fc21)
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-3
-InstanceOf: Specimen
+InstanceOf: SpecimenUvLabObligations
 Usage: #inline
 * id = "5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb"
 * type = urn:oid:2.16.840.1.113883.5.129#UR "Urine"

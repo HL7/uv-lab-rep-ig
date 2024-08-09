@@ -1,5 +1,5 @@
 Instance: Specimen-animal-example
-InstanceOf: SpecimenUvLab
+InstanceOf: SpecimenUvLabObligations
 Usage: #example
 /* * contained = Patient-animal-example */
 * status = #available
