@@ -5,8 +5,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<blockquote class="dragon">		
 		<p>This guide uses the HL7 Europe Laboratory Report FHIR IG as initial content.</p>
-		<p>This working version may still include pages, profiles, and other artefacts or references copied from the European Guide.</p>
-		<p>These artefacts and references will be progressivelsy cleaned up.</p>
+		<p>This working version may still include pages, profiles, and other artifacts or references that have initially been copied from the European guide.  Further work to fully internationalize the IG content is in progress, and ballot comments regarding further changes that should be made are welcome.</p>
 	</blockquote>
 </div>
 
