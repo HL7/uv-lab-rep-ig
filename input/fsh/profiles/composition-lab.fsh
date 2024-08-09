@@ -10,13 +10,13 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 \r\nA composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. \r\nWhile a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."
 
 * extension contains CompositionBasedOnOrderOrRequisition named basedOn-order-or-requisition 0..*
-* extension[basedOn-order-or-requisition].valueReference only Reference(ServiceRequestLabUv)
+* extension[basedOn-order-or-requisition].valueReference only Reference(ServiceRequestUvLab)
 
 * extension contains InformationRecipient named information-recipient 0..*
 * extension[information-recipient].valueReference only Reference(PractitionerUvLab or Device or PatientUvLab or RelatedPerson or PractitionerRoleUvLab or Organization)
 
 * extension contains DiagnosticReportReference named diagnosticReport-reference 0..1
-* extension[diagnosticReport-reference].valueReference only Reference(DiagnosticReportLabUv)
+* extension[diagnosticReport-reference].valueReference only Reference(DiagnosticReportUvLab)
 * extension[diagnosticReport-reference].valueReference 1..1
 * extension[diagnosticReport-reference].valueReference.reference 1..
 
@@ -102,7 +102,7 @@ Variant 2: Text and Entry - With this option, the Laboratory Specialty Section t
   * insert SectionElementsRules
 /*   * code from LabStudyTypesVs (preferred)
   * text ^short = "Text summary of the section, for human interpretation."
-  * entry only Reference (ObservationResultsLabUv or DiagnosticReport)
+  * entry only Reference (ObservationResultsUvLab or DiagnosticReport)
   * entry 1..
   * section ..0 */
 
@@ -125,7 +125,7 @@ Variant 2: Text and Entry - With this option, the Laboratory Specialty Section t
     * code from LabStudyTypesVs (preferred)
 /*        * text ^short = "Text summary of the section, for human interpretation."
     * entry 1..
-    * entry only Reference (ObservationResultsLabUv)
+    * entry only Reference (ObservationResultsUvLab)
     * section 0..0 */
 
 // -------------------------------------

@@ -1,4 +1,4 @@
-Profile: ServiceRequestLabUv
+Profile: ServiceRequestUvLab
 Parent: ServiceRequest
 Id: ServiceRequest-uv-lab
 Title: "ServiceRequest: Laboratory Order"

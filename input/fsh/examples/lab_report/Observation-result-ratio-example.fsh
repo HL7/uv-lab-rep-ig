@@ -1,5 +1,5 @@
 Instance: LabObservtionResultRatio
-InstanceOf: ObservationResultsLabUv
+InstanceOf: ObservationResultsUvLab
 Title: "Observation: ratio example"
 Description: "Example of Observation with ratio result"
 Usage: #example

@@ -1,4 +1,4 @@
-Profile: DiagnosticReportLabUv
+Profile: DiagnosticReportUvLab
 Parent: DiagnosticReport
 Id: DiagnosticReport-uv-lab
 Title: "DiagnosticReport: Laboratory Report"
@@ -32,7 +32,7 @@ Mutimedia Embedded Content
 Annotation Comment
 */
 
-* basedOn only Reference ( ServiceRequestLabUv )
+* basedOn only Reference ( ServiceRequestUvLab )
 
 * insert ReportStatusRule
 
@@ -66,7 +66,7 @@ Annotation Comment
   /* * obeys labRpt-author */
 * specimen only Reference (SpecimenUvLab)
   * ^short = "Specimens this report is based on."
-* result only Reference (ObservationResultsLabUv)
+* result only Reference (ObservationResultsUvLab)
   * ^short = "results" 
 * imagingStudy 0..0
 * presentedForm ^short = "Entire report as issued (pdf recommended)"

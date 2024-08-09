@@ -95,19 +95,19 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * entry[composition].resource only CompositionLabReportUv
 
 * entry contains diagnosticReport 1..1
-* entry[diagnosticReport].resource only DiagnosticReportLabUv
+* entry[diagnosticReport].resource only DiagnosticReportUvLab
 
 * entry contains patient 0..1
 * entry[patient].resource only Patient or PatientUvLab or PatientAnimalUvLab
 
 * entry contains observation 0..*
-* entry[observation].resource only ObservationResultsLabUv
+* entry[observation].resource only ObservationResultsUvLab
 
 * entry contains specimen 0..*
 * entry[specimen].resource only SpecimenUvLab
 
 * entry contains serviceRequest 0..*
-* entry[serviceRequest].resource only ServiceRequestLabUv
+* entry[serviceRequest].resource only ServiceRequestUvLab
 
 * entry contains organization 0..*
 * entry[organization].resource only Organization

@@ -1,5 +1,5 @@
 Instance: dr-lab-example
-InstanceOf: DiagnosticReportLabUv
+InstanceOf: DiagnosticReportUvLab
 Usage: #example
 * extension[DiagnosticReportCompositionR5].url = $diagnostic-report-composition-r5
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(comp-lab-example)
@@ -73,7 +73,7 @@ Usage: #example
 * collection.collectedDateTime = "2022-10-25T13:35:00+01:00" */
 
 Instance: obs-gram-stain
-InstanceOf: ObservationResultsLabUv
+InstanceOf: ObservationResultsUvLab
 Usage: #example
 /* * id = "40278a69-87aa-470f-a38f-bff1e8aee175" */
 * status = #final
@@ -86,7 +86,7 @@ Usage: #example
 * hasMember[+] = Reference(obs-gs-org1) // obs-gs-org1
 
 Instance: obs-wbc
-InstanceOf: ObservationResultsLabUv
+InstanceOf: ObservationResultsUvLab
 Usage: #example
 /* * id = "1097929f-890e-4e27-a31d-58599f3e2479" */
 * status = #final
@@ -99,7 +99,7 @@ Usage: #example
 * valueCodeableConcept.text = "None observed"
 
 Instance: obs-gs-org1
-InstanceOf: ObservationResultsLabUv
+InstanceOf: ObservationResultsUvLab
 Usage: #example
 /* * id = "fcf220c3-7f3e-44f8-b669-48552a20fa0a" */
 * status = #final
@@ -112,7 +112,7 @@ Usage: #example
 * hasMember[+] = Reference(obs-gs-org1-quant) 
 
 Instance: obs-gs-org1-quant
-InstanceOf: ObservationResultsLabUv
+InstanceOf: ObservationResultsUvLab
 Usage: #example
 /* * id = "2cecbd1e-4695-46dc-adf8-3ed3b95c0c1e" */
 * status = #final
@@ -126,7 +126,7 @@ Usage: #example
 
 
 Instance: obs-aerobic-culture
-InstanceOf: ObservationResultsLabUv
+InstanceOf: ObservationResultsUvLab
 Usage: #example
 /* * id = "8754019d-256b-4df9-94f2-f80c07e08d47" */
 * status = #final
@@ -139,7 +139,7 @@ Usage: #example
 * hasMember[+] = Reference(obs-org-id1) 
 
 Instance: obs-org-id1
-InstanceOf: ObservationResultsLabUv
+InstanceOf: ObservationResultsUvLab
 Usage: #example
 /* * id = "083ee3df-1381-4ed2-849f-77808eb81a36" */
 * status = #final
@@ -154,7 +154,7 @@ Usage: #example
 * hasMember[+] = Reference(obs-org-id1-susc-panel)
 
 Instance: obs-org-id1-growth
-InstanceOf: ObservationResultsLabUv
+InstanceOf: ObservationResultsUvLab
 Usage: #example
 /* * id = "758d2270-a997-4a8f-872f-b3fbaef209fa" */
 * status = #final
@@ -168,7 +168,7 @@ Usage: #example
 * valueCodeableConcept.text = "++"
 
 Instance: obs-org-id1-susc-panel
-InstanceOf: ObservationResultsLabUv
+InstanceOf: ObservationResultsUvLab
 Usage: #example
 /* * id = "61f8e930-46e0-41ab-9448-0d1dc74925df" */
 * status = #final
@@ -184,7 +184,7 @@ Usage: #example
 * hasMember[+] = Reference(obs-org-id1-susc-4)
 
 Instance: obs-org-id1-susc-1
-InstanceOf: ObservationResultsLabUv
+InstanceOf: ObservationResultsUvLab
 Usage: #example
 /* * id = "85230b86-9b90-4faf-a750-d5fa82520ce9" */
 * status = #final
@@ -201,7 +201,7 @@ Usage: #example
 * interpretation = $obs-interpretation#S "Susceptible"
 
 Instance: obs-org-id1-susc-2
-InstanceOf: ObservationResultsLabUv
+InstanceOf: ObservationResultsUvLab
 Usage: #example
 /* * id = "1fb64f47-4272-43ae-a119-c3b4c3367829" */
 * status = #final
@@ -218,7 +218,7 @@ Usage: #example
 * interpretation = $obs-interpretation#R "Resistant"
 
 Instance: obs-org-id1-susc-3
-InstanceOf: ObservationResultsLabUv
+InstanceOf: ObservationResultsUvLab
 Usage: #example
 /* * id = "af249f79-f487-4533-9935-d19ab7043724" */
 * status = #final
@@ -234,7 +234,7 @@ Usage: #example
 * interpretation = $obs-interpretation#S "Susceptible"
 
 Instance: obs-org-id1-susc-4
-InstanceOf: ObservationResultsLabUv
+InstanceOf: ObservationResultsUvLab
 Usage: #example
 /* * id = "a4469ca9-d0be-4c58-853a-44cea24484b8" */
 * status = #final
@@ -252,7 +252,7 @@ Usage: #example
 
 
 Instance: obs-anaerobic-culture
-InstanceOf: ObservationResultsLabUv
+InstanceOf: ObservationResultsUvLab
 Usage: #example
 /* * id = "5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e" */
 * status = #final
@@ -297,7 +297,7 @@ Usage: #example
 * address.country = "100"
 
 Instance: srv-request-example
-InstanceOf: ServiceRequestLabUv
+InstanceOf: ServiceRequestUvLab
 Usage: #example
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.3.9"
 * identifier.value = "[NRE]"

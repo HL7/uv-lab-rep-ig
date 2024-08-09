@@ -116,7 +116,7 @@ Usage: #inline
 
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-18
-InstanceOf: DiagnosticReportLabUv
+InstanceOf: DiagnosticReportUvLab
 Usage: #inline
 * id = "b8c9663d-2c2b-4a5a-99ea-17eae127fc60"
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(urn:uuid:26032a57-083a-4ddf-b019-e566ae02f740)
@@ -368,7 +368,7 @@ Usage: #inline
 * address.country = "100"
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-10
-InstanceOf: ServiceRequestLabUv
+InstanceOf: ServiceRequestUvLab
 Usage: #inline
 * id = "1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1"
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.3.9"

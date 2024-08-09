@@ -1,5 +1,5 @@
 Instance: CRMObservtionResult
-InstanceOf: ObservationResultsLabUv
+InstanceOf: ObservationResultsUvLab
 Title: "Observation: certified reference material"
 Description: "Example of Observation with a concentration of insulin of 50 mIU/L, using as certified reference material https://www.nibsc.org/documents/ifu/66-304.pdf"
 Usage: #example

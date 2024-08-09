@@ -1,5 +1,5 @@
 Profile: ServiceRequestUvLabObligations
-Parent: ServiceRequestLabUv
+Parent: ServiceRequestUvLab
 Id: ServiceRequest-obl-uv-lab
 Title:    "ServiceRequest: Obligations"
 Description: "This profile defines obligations for ServiceRequest in FHIR for the purpose of this guide."

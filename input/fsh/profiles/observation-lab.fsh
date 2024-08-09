@@ -1,4 +1,4 @@
-Profile: ObservationResultsLabUv
+Profile: ObservationResultsUvLab
 // Parent: ObservationResultsUvLab
 Parent: Observation
 Id: Observation-resultslab-uv-lab
@@ -72,9 +72,9 @@ That's why it is important to explicitly include informaiton about measurement m
 * method from LabTechniqueVs (preferred) // added binding to an agreed lab measurement method value set
 * specimen only Reference(SpecimenUvLab)
   * ^comment = "When the specimen is applicable and known it shall be documented"
-// * hasMember only Reference(ObservationResultsLabUv)
+// * hasMember only Reference(ObservationResultsUvLab)
 * device ^short = "Measuring instrument"
-* hasMember only Reference(ObservationResultsLabUv)
+* hasMember only Reference(ObservationResultsUvLab)
 * hasMember ^definition = "A reference to another Observation profiled by Observation-results-laboratory-uv-ips. The target observation (for instance an individual test member of a panel) is considered as a sub-observation of the current one, which plays the role of a grouper."
 * hasMember ^comment = "This element is used in the context of international patient summary when there is a need to group a collection of observations, because they belong to the same panel, or because they share a common interpretation comment, or a common media attachment (illustrative image or graph). In these cases, the current observation is the grouper, and its set of sub-observations are related observations using the type \"has-member\".  For a discussion on the ways Observations can be assembled in groups together see [Observation Grouping](http://hl7.org/fhir/observation.html#obsgrouping)."
 * issued ^short = "Date/Time this result was made available"

@@ -50,7 +50,7 @@ Usage: #inline
 * section[=].entry[+] = Reference(urn:uuid:8bd279af-125a-4318-b461-ba5629b12e7f)
 
 Instance: Inline-Diagnostic-Report-laboratory-results-report-poc
-InstanceOf: DiagnosticReportLabUv
+InstanceOf: DiagnosticReportUvLab
 Usage: #inline
 * code = $loinc#11502-2 "Laboratory report"
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(urn:uuid:80709186-426d-4cdf-abba-034c4f80acb4)
@@ -81,7 +81,7 @@ Usage: #inline
 * birthDate = "2000-03-21"
 
 Instance: Inline-Observation-laboratory-results-report-poc
-InstanceOf: ObservationResultsLabUv
+InstanceOf: ObservationResultsUvLab
 Usage: #inline
 * id = "8bd279af-125a-4318-b461-ba5629b12e7f"
 * status = #final
@@ -104,7 +104,7 @@ Usage: #inline
 * type.text = "Blood specimen"
 
 Instance: Inline-ServiceRequest-laboratory-results-report-poc
-InstanceOf: ServiceRequestLabUv
+InstanceOf: ServiceRequestUvLab
 Usage: #inline
 * identifier.system = "http://example.org"
 * identifier.value = "2e861278-2e99-4ffa-befa-049467a095b2"

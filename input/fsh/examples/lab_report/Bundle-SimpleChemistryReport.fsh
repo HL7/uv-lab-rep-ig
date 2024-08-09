@@ -126,7 +126,7 @@ Usage: #inline
 * section[lab-subsections].section[=].entry = Reference(urn:uuid:18bd102e-0abf-42b0-b4e6-97e47fd385eb)
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-5679723c-4fae-4ba7-9f09-5438a827bfda
-InstanceOf: DiagnosticReportLabUv
+InstanceOf: DiagnosticReportUvLab
 Usage: #inline
 * id = "5679723c-4fae-4ba7-9f09-5438a827bfda"
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.2.120.4.4"
@@ -369,7 +369,7 @@ Usage: #inline
 * address.country = "100"
 
 Instance: Inline-ServiceRequest-for-IT-CDA2FHIR
-InstanceOf: ServiceRequestLabUv
+InstanceOf: ServiceRequestUvLab
 Usage: #inline
 * id = "1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1"
 * identifier.system = "http://hospital.org/lis-order"
@@ -421,7 +421,7 @@ Usage: #inline
 * identifier.assigner.display = "Ministero della Salute"
 
 Instance: Inline-Instance-for-Observation-763f7902-8103-4d10-8bd1-546a726d43ee
-InstanceOf: ObservationResultsLabUv
+InstanceOf: ObservationResultsUvLab
 Usage: #inline
 * id = "763f7902-8103-4d10-8bd1-546a726d43ee"
 * status = #final
@@ -445,7 +445,7 @@ Usage: #inline
 * referenceRange.type = $reference-range-meaning#normal "Normal Range"
 
 Instance: Inline-Instance-for-Observation-18bd102e-0abf-42b0-b4e6-97e47fd385eb
-InstanceOf: ObservationResultsLabUv
+InstanceOf: ObservationResultsUvLab
 Usage: #inline
 * id = "18bd102e-0abf-42b0-b4e6-97e47fd385eb"
 * status = #final

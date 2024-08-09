@@ -57,7 +57,7 @@ This is done by supporting a scalable approach allowing the different jurisdicti
 
 The following diagrams provide a browseable overview of the profiles specified by this guide (not all the relationships have been reported).
 
-The first highlights the most relevant relationships starting from the DiagnosticReport ( [DiagnosticReportLabUv] ) resource (REST Perspective).
+The first highlights the most relevant relationships starting from the DiagnosticReport ( [DiagnosticReportUvLab] ) resource (REST Perspective).
 
 <div>
 <p>{% include links-overview.svg %}</p>

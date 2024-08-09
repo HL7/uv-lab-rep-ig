@@ -1,5 +1,5 @@
 Profile: ObservationUvLabObligations
-Parent: ObservationResultsLabUv
+Parent: ObservationResultsUvLab
 Id: Observation-obl-uv-lab
 Title:    "Observation: Obligations"
 Description: "This profile defines obligations for Observation in FHIR for the purpose of this guide."
