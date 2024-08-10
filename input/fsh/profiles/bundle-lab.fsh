@@ -3,8 +3,8 @@
 //===================================
 
 Invariant: dr-to-comp-link
-Description: "The DiagnosticReport included in a laboratory report bundle SHALL always refer to a composition"
-Expression: "entry.resource.ofType(DiagnosticReport).extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition').value.resolve() is Composition"
+Description: "If the laboratory report bundle contains a Composition resource, the DiagnosticReport SHALL always refer to the composition"
+Expression: "entry.resource.ofType(Composition).exists() implies (entry.resource.ofType(DiagnosticReport).extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition').value.resolve() is Composition)"
 Severity:    #error
 
 Invariant: dr-comp-enc
@@ -14,14 +14,14 @@ Expression: "( (entry.resource.ofType(Composition).encounter.empty() and entry.r
 Severity:    #error
 
 Invariant: dr-comp-subj
-Description: "DiagnosticReport and Composition SHALL have the same subject"
-Expression: "( (entry.resource.ofType(Composition).subject.empty() and entry.resource.ofType(DiagnosticReport).subject.empty() ) or entry.resource.ofType(Composition).subject = entry.resource.ofType(DiagnosticReport).subject )"
+Description: "If the laboratory report bundle contains a Composition resource, DiagnosticReport and Composition SHALL have the same subject"
+Expression: "entry.resource.ofType(Composition).exists() implies ( (entry.resource.ofType(Composition).subject.empty() and entry.resource.ofType(DiagnosticReport).subject.empty() ) or entry.resource.ofType(Composition).subject = entry.resource.ofType(DiagnosticReport).subject )"
 Severity:    #error
 
 
 Invariant: dr-comp-type
-Description: "At least one DiagnosticReport.code.coding and Composition.type.coding SHALL be equal"
-Expression: "entry.resource.ofType(Composition).type.coding.intersect(entry.resource.ofType(DiagnosticReport).code.coding).exists()" 
+Description: "If the laboratory report bundle contains a Composition resource, at least one DiagnosticReport.code.coding and Composition.type.coding SHALL be equal"
+Expression: "entry.resource.ofType(Composition).exists() implies entry.resource.ofType(Composition).type.coding.intersect(entry.resource.ofType(DiagnosticReport).code.coding).exists()" 
 Severity:    #error
 
 Invariant: dr-comp-category
