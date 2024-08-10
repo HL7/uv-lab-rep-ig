@@ -2,7 +2,7 @@
 
 {% include fsh-link-references.md %}
 
-#### DiagnosticReport Vs HL7 FHIR Document
+#### DiagnosticReport vs HL7 FHIR Document
 
 There are two ways - in principle - for representing a Laboratory report in HL7 FHIR:
 * by using the DiagnosticReport resource; or 
