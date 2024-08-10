@@ -9,11 +9,11 @@
 
 ### Overview 
 
-Obligations are a means offered by HL7 FHIR to specify functional capabilities that defined actors MAY, SHOULD or SHALL to the data elements specified by the profiles.
+Obligations are a means offered by HL7 FHIR to specify functional capabilities that defined actors MAY, SHOULD or SHALL conform to for the data elements specified by the profiles.
 
-The current choice has been that of defining the obligation in StructureDefinitions distinct from those used for defining the structural constraints.
+The current choice is to define the obligations in StructureDefinitions distinct from those used for defining the structural constraints.
 
-This page describes also the actors that have been defined for specifying the obligations.
+This page also describes the actors that have been defined for specifying the obligations.
 
 ### Actors
 
@@ -24,7 +24,7 @@ Three actors have been specified:
 * the [Repository](ActorDefinition-actor-repos-uv-lab.html) ; and 
 * the [Consumer](ActorDefinition-actor-consumer-uv-lab.html)
 
-The first is the actor creating the report. This report can be send to a consumer or to a repository for report storage and sharing. 
+The first is the actor creating the report. This report can be sent to a consumer or to a repository for report storage and sharing. 
 The second actor is the system maintaining a copy of the report received, to store and make it available for the consumers.
 The last actor is the system using the report received or retrieved.
 

@@ -3,7 +3,7 @@
 This guide is the result of a multi stakeholder effort involving different experts from several European countries, projects (e.g. XpanDH) and initiatives (e.g. MyHealth@EU); organized in two collaborating sub-groups:
 - one focusing on semantic and functional requirements, and
 - one working on the HL7 FHIR specifications
-With further work done on internationalizing and re-balloting the specification in the universal realm by the HL7 International Orders and Observations Work group.
+With further work done on internationalizing and re-balloting the specification in the universal realm by the HL7 International Orders and Observations Work Group.
 
 The following picture provide an overview of the origin of the participants.
 

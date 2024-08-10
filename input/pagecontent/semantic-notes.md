@@ -1,18 +1,18 @@
 ### Result Report Workflow
-Result report use case covers workflows related to tests performed and reported by a clinical laboratory in response to in-vitro diagnostic test orders.
+The result report use case covers workflows related to tests performed and reported by a clinical laboratory in response to in-vitro diagnostic test orders.
 
 #### Standard Result Report Workflow
-Laboratory, after performing its internal testing workflow, which includes consolidation of all test result orders or order groups and all steps of data quality assurance and validation, forms a complete result report, formed according to the requirements and query parameters formulated by the ordering entity, marks report as “final” (sets Laboratory result report status to “final”) and sends it to the application of the clinical practice (known as Order Result Tracker) as well as to all informants included in the Laboratory test order. A copy of the report might be stored to an attached EHR repository system.
+The laboratory, after performing its internal testing workflow, which includes consolidation of all test result orders or order groups and all steps of data quality assurance and validation, forms a complete result report, formed according to the requirements and query parameters formulated by the ordering entity, marks the report as “final” (sets Laboratory result report status to “final”) and sends it to the application of the clinical practice (known as Order Result Tracker) as well as to all informants included in the Laboratory test order. A copy of the report might be stored to an attached EHR repository system.
 All individual test results which are included in the final laboratory result report should be also marked as Final or Cancelled.
 
 #### Partial Result Report Workflow
-In some cases, laboratory might release result report which is either incomplete (not all results are available or marked as “final”) or is unverified. This is usually the case when some of the results are known to be produced later (due to the nature of the test or due to organisational or technical reasons in laboratory) while other test results need to be communicated to report recipients due to a specific organisational and/or process rules or due to an urgency of some of the test results. In such case the report status should be always set to “preliminary” or “partial”. For details see also [Laboratory result report status](#laboratory-result-report-status).
+In some cases, the laboratory might release a result report which is either incomplete (not all results are available or marked as “final”) or is unverified. This is usually the case when some of the results are known to be produced later (due to the nature of the test or due to organisational or technical reasons in the laboratory) while other test results need to be communicated to the report recipients due to specific organisational and/or process rules or due to an urgency of some of the test results. In such case the report status should always be set to “preliminary” or “partial”. For details see also [Laboratory result report status](#laboratory-result-report-status).
 
 ####	Amended Result Report Workflow
-When result report content or referenced resources have been modified (edited or added to) after being released as "final" and the report is complete and verified by an authorised person, report status should be set to “amended”, “corrected” or “appended”, depending on the situation. For details see also [Laboratory result report status](#laboratory-result-report-status).
+When the result report content or referenced resources have been modified (edited or added to) after being released as "final" and the report is complete and verified by an authorised person, the report status should be set to “amended”, “corrected” or “appended”, depending on the situation. For details see also [Laboratory result report status](#laboratory-result-report-status).
 
 #### Cancelled Result Report Workflow
-In some cases, laboratory might not be able to perform any test and deliver a result report. This might have many reasons, e.g., lost sample, broken tube, dysfunction of the analyser etc. In such case the status value should be updated to "cancelled" and the specific details given - preferably as coded values in the TestResultvalue.CodedResult element. Additional information may be provided in the result comment element as well.
+In some cases, the laboratory might not be able to perform any test and deliver a result report. This might have many reasons, e.g., lost sample, broken tube, dysfunction of the analyser etc. In such cases the status value should be updated to "cancelled" and the specific details given - preferably as coded values in the TestResultvalue.CodedResult element. Additional information may be provided in the result comment element as well.
 
 #### Error Result Report Workflow
 If the laboratory result report was originally created/issued in error, then its status should be set to “entered-in-error”. This is an amendment that marks that the entire report should not be considered as valid.
@@ -20,13 +20,13 @@ If the laboratory result report was originally created/issued in error, then its
 ### Laboratory result report status
 Laboratory result reports, as documented in the previous chapters, could exist in several states depending on a particular workflow. Applications consuming laboratory test result reports must take careful note of updated (revised) reports and ensure that retracted reports are appropriately handled.
 
-For applications providing diagnostic reports, such as laboratory result reports, a report should not be final until all the individual data items reported with it are final or appended.
+For applications providing diagnostic reports, such as laboratory result reports, a report should not be final until all of the individual data items reported with it are final or appended.
 
 If the report has been withdrawn following a previous final release, the report and associated observations should be retracted by replacing the status codes with the concept "entered-in-error" and setting the conclusion/comment (if provided) and the text narrative to some text like "This report has been withdrawn" in the appropriate language. A reason for retraction may be provided in the narrative. A state machine documents possible transitions between states.
 
-Laboratory result report is implemented using DiagnosticReport resource in FHIR. It includes clinical context such as requesting provider information, and some mix of atomic results, images, textual and coded interpretations, formatted representation of diagnostic reports and status information.
+The laboratory result report is implemented using the DiagnosticReport resource in FHIR. It includes clinical context such as requesting provider information, and some mix of atomic results, images, textual and coded interpretations, formatted representation of diagnostic reports and status information.
 
-Diagnostic report status value set is comprised from following status codes (https://hl7.org/fhir/R4/codesystem-diagnostic-report-status.html)
+The DiagnosticReport status value set is comprised from following status codes (https://hl7.org/fhir/R4/codesystem-diagnostic-report-status.html)
 
 |Lvl|Code|Display|Definition|
 |:---:|----|-------|----------|
@@ -48,7 +48,7 @@ Diagnostic report status value set is comprised from following status codes (htt
 </div>
 
 ### Observation status
-Not only the report itself, but also its entries, i.e., individual Observations included in the laboratory result report, could be in a different lifecycle stage. This stage could be expressed using a status code as described in the table below with state transitions depicted in the State machine diagram.
+Not only the report itself, but also its entries, i.e., individual observations included in the laboratory result report, could be in a different lifecycle stage. This stage could be expressed using a status code as described in the table below with state transitions depicted in the state machine diagram.
 
 |Lvl|Code|Display|Definition|
 |:---:| --------- | ----------- | ------------------------------------------------------------------------------------- |
@@ -68,7 +68,7 @@ Not only the report itself, but also its entries, i.e., individual Observations 
 </div>
 
 # Composition status (R4)
-A Composition defines the structure and narrative content necessary for a laboratory report. A Composition status represents a workflow and clinical status of the composition.
+A Composition defines the structure and narrative content necessary for a laboratory report. A Composition status represents a workflow and clinical status of the Composition.
 
 |Lvl|Code|Display|Definition|
 |:---:| --------- | ----------- | ------------------------------------------------------------------------------------- |
@@ -77,7 +77,7 @@ A Composition defines the structure and narrative content necessary for a labora
 | 1 | amended     | Amended     | The composition content or the referenced resources have been modified (edited or added to) subsequent to being released as "final" and the composition is complete and verified by an authorized person. |
 | 1 | entered-in-error | Entered in Error | The composition or document was originally created/issued in error, and this is an amendment that marks that the entire series should not be considered as valid.                                    |
 
-A following state machine diagram describes transitions between statuses.
+A following state machine diagram describes the transitions between statuses.
 
 <div>
 <p></p>
@@ -87,7 +87,7 @@ A following state machine diagram describes transitions between statuses.
 
 
 # Composition status (R5)
-Composition status codes have been extended in R5 to better match different workflows and correspondence between Composition status and DiagnosticReport status.
+Composition status codes have been extended in R5 to better match different workflows and the correspondence between Composition status and DiagnosticReport status.
 
 |Lvl|Code|Display|Definition|
 |:---:| --------- | ----------- | ------------------------------------------------------------------------------------- |
@@ -103,7 +103,7 @@ Composition status codes have been extended in R5 to better match different work
 | 1 | deprecated  | Deprecated  | This composition has been withdrawn or superseded and should no longer be used.       |
 | 1 | unknown     | Unknown     | The authoring/source system does not know which of the status values currently applies for this observation. Note: This concept is not to be used for "other" - one of the listed statuses is presumed to apply, but the authoring/source system does not know which.                                                             |
 
-A following state machine diagram describes transitions between statuses.
+The following state machine diagram describes transitions between statuses.
 
 <div>
 <p></p>
@@ -113,7 +113,7 @@ A following state machine diagram describes transitions between statuses.
 
 
 ### Diagnostic report status and Observation status
-The status of the document and status of its entries is partially independent from the workflow point of view thus specification of the consistency rules or mapping would be difficult. However some basic rules could be probably specified as described in the following table.
+The status of the document and the status of its entries is partially independent from the workflow point of view, thus specification of the consistency rules or mappings would be difficult. However some basic rules could probably be specified as described in the following table.
 
 | DiagnosticReport status | Excerpt from deiftion | Observation status recommendations for implementers           |
 | ----------------------- | --------------------- | ------------------------------------------------------------- |
@@ -129,7 +129,7 @@ The status of the document and status of its entries is partially independent fr
 | unknown                 |  | All Observation.status are unknown. |
 
 ### Diagnostic report status and Composition status
-Status of the laboratory result report (DiagnosticReport) and its structured content (Composition) should be consistent and implementers should keep this consistency in mind. As value sets for the Composition status codes differ in R4 and R5, different rules should apply in both versions of the FHIR specification as described in the following articles.
+The status of the laboratory result report (DiagnosticReport) and its structured content (Composition) should be consistent and implementers should keep this consistency in mind. As value sets for the Composition status codes differ in R4 and R5, different rules should apply in both versions of the FHIR specification as described in the following articles.
 
 #### Diagnostic report status and Composition status - R4
 Recommended mapping between DiagnosticReport status codes and Composition.status codes for FHIR R4:

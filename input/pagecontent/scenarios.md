@@ -6,12 +6,12 @@ These scenarios, in scope for this guide, relate to tests performed and reported
 
 More details on statuses and their relationships are provided in [Laboratory result report status](status-mgmt.html).
 
-It is not in scope of this version of this guides to specify the actor-to-actor interactions for supporting such scenarios. (e.g.  how to communicate that a report has been sent in error).
+It is not in the scope of this version of the IG to specify the actor-to-actor interactions for supporting such scenarios. (e.g. how to communicate that a report has been sent in error).
 
 #### Complete Laboratory Report
 
 * A Laboratory, after performing its internal testing workflow, **forms a complete result report**, according to the requirements and query parameters formulated by the ordering entity. Internal testing workflow includes consolidation of all test result orders or order groups and all steps of data quality assurance and validation.
-* Then, depending on its internal organization, may inform the application of the clinical practice (known as Order Result Tracker), send the report to the intended recipients included in the Laboratory test order; store a report copy in an EHR-system; etc.
+* Then, depending on its internal organization, the laboratory may inform the application of the clinical practice (known as Order Result Tracker), send the report to the intended recipients included in the Laboratory test order; store a report copy in an EHR-system; etc.
 
 In this case:
 * the Laboratory report status is set to “final”;
@@ -41,7 +41,7 @@ In such cases:
 In this case:
 
 * The report status used will indicate what modifications have occurred:
-  * Status set to “amended” when changes were made to patient demographics or other parts of the report, that don't affect the result value (with units, if applicable) or result interpretation
+  * Status set to “amended” when changes were made to patient demographics or other parts of the report that don't affect the result value (with units, if applicable) or result interpretation
   * Status set to “corrected” when changes are made to the result value (with units, if applicable) or result interpretation
   * Status set to “appended” when new results or interpretations are being added
 

@@ -13,14 +13,19 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<blockquote class="stu-note">		
 		<p>This ballot version is based on the HL7 Europe Laboratory Report FHIR IG as the initial content.</p>		
-		<p>Balloters are requested to provide their feedback on the design approach taken in this IG (based on the prior EU work), particularly on the use of the FHIR 'document' Bundle containing both the Composition and DiagnosticReport resources for structuring and organizing the report.  This approach is the result of compromising between the business requirements that have been expressed for the report to be a valid clinical document (potentially with signature) and also searchable and accessible via the DiagnosticReport endpoint, as well as the desire to constrain the available options and promote standardization on a common implementation strategy.</p>
+		<p>Balloters are requested to provide their feedback on the design approach taken in this IG (based on the prior European work), particularly on the use of the FHIR 'document' Bundle containing both the Composition and DiagnosticReport resources for structuring and organizing the report.  This approach is the result of compromising between the business requirements that have been expressed for the report to be a valid clinical document (potentially with signature) and also searchable and accessible via the DiagnosticReport endpoint, as well as the desire to constrain the available options and promote standardization on a common implementation strategy.
+		</p>
+		<p>The IG aims to represent two principal methods of communicating lab results - one method that uses a FHIR Document to include the DiagnosticReport/Observations, and another method that includes the DiagnosticReport/Observations and also optionally as needed a Composition for structuring the results that would not yield a formal FHIR Document.  We seek feedback on how to better represent and/or explain these options.
+		</p>
+		<p>We also seek feedback on how to model DiagnosticReport - Observation structures to enable consistent representation of Observations that are reported either as part of a panel or separately.  E.g., when should DiagnosticReport.code and Observation.code be duplicative, can Observations include panel headers (and thus have empty Observation.value attributes, etc.).
+		</p>
 	</blockquote>
 </div>
 
 <div xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<blockquote class="stu-note">		
-		<p>Obligations have been added to this version of the guide only as <b>Informative</b> material to collect feedback about their usage.</p>		
+		<p>Obligations have been added to this version of the IG only as <b>Informative</b> material to collect feedback about their usage.</p>		
 		<p>For more details about obligations please refer to the <a href="obligations.html">Obligations page</a></p>
 	</blockquote>
 </div>
