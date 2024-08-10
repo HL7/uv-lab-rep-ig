@@ -36,9 +36,9 @@ Description: "If one or more DiagnosticReport.identifiers are given, at least on
 Expression: "(entry.resource.ofType(Composition).identifier.exists() or entry.resource.ofType(DiagnosticReport).identifier.exists()) implies entry.resource.ofType(Composition).identifier.intersect(entry.resource.ofType(DiagnosticReport).identifier).exists()" 
 Severity:    #error
 
-Invariant: one-comp
-Description: "A laboratory report bundle SHALL include one and only one Composition"
-Expression: "entry.resource.ofType(Composition).count() = 1"
+Invariant: one-comp-max
+Description: "A laboratory report bundle SHALL include a maximum of only one Composition"
+Expression: "entry.resource.ofType(Composition).count() <= 1"
 Severity:    #error
 
 Invariant: one-dr
@@ -61,7 +61,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * . ^definition = "Laboratory Report bundle."
 
 * obeys dr-to-comp-link
-* obeys one-comp
+* obeys one-comp-max
 * obeys one-dr
 * obeys dr-comp-identifier
 * obeys dr-comp-type
@@ -72,7 +72,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 
 * identifier ^short = "Business identifier for this Laboratory Report"
 * identifier 1..
-* type = #document
+* type from LabReportBundleTypesVs (required)
 * timestamp 1..
 * total ..0
 * link ..0
@@ -91,7 +91,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * entry ^slicing.ordered = false
 * entry ^slicing.rules = #open
 
-* entry contains composition 1..1
+* entry contains composition 0..1
 * entry[composition].resource only CompositionLabReportUv
 
 * entry contains diagnosticReport 1..1
