@@ -21,10 +21,10 @@ The primary and secondary certified reference materials that are produced in lin
 Most of the international conventional calibrators of WHO are available via its designated laboratory MHRA (formerly NIBSC) (https://www.nibsc.org/)
 
 Some examples (in plain text, without the specific syntax used by LOINC and NPU) to describe what is measured in a laboratory test:
-* [The concentration of insulin in a sample is 50 mIU/L with reference to IS 66/304](Observation-4335db48-7090-45b3-a2c2-45b45f94a67c.html) (https://www.nibsc.org/documents/ifu/66-304.pdf)
-* The concentration of ferritin in a sample is 25 µg/L with reference to IS 19/118 (https://nibsc.org/documents/ifu/19-118.pdf)
-* The concentration of albumin in a sample is 45 g/L with reference to ERM-DA470k/IFCC (https://www.jctlmdb.org/#/app/home)
-* The concentration of PSA in the sample is 6,8 µg/L with reference to IS 17/100 (https://www.nibsc.org/documents/ifu/17-100.pdf)
+* [The concentration of insulin in a sample is 50 mIU/L with reference to IS 66/304](Observation-4335db48-7090-45b3-a2c2-45b45f94a67c.html) ([https://www.nibsc.org/documents/ifu/66-304.pdf](https://www.nibsc.org/documents/ifu/66-304.pdf))
+* The concentration of ferritin in a sample is 25 µg/L with reference to IS 19/118 ([https://nibsc.org/documents/ifu/19-118.pdf](https://nibsc.org/documents/ifu/19-118.pdf))
+* The concentration of albumin in a sample is 45 g/L with reference to ERM-DA470k/IFCC ([https://www.jctlmdb.org/#/app/home](https://www.jctlmdb.org/#/app/home))
+* The concentration of PSA in the sample is 6,8 µg/L with reference to IS 17/100 ([https://www.nibsc.org/documents/ifu/17-100.pdf](https://www.nibsc.org/documents/ifu/17-100.pdf))
 
 Secondary certified reference materials and international conventional calibrators are usually produced from material of human origin like blood or serum, and they are therefore available in a limited stock that will eventually be depleted.
 
@@ -35,7 +35,7 @@ For international conventional calibrators containing a complex and ill- defined
 
 ### References:
 
-BIPM. VIM: International vocabulary of metrology – Basic and general concepts and associated terms, 3rd edition (2012),(https://www.bipm.org/en/committees/jc/jcgm/publications)
+BIPM. VIM: International vocabulary of metrology – Basic and general concepts and associated terms, 3rd edition (2012),([https://www.bipm.org/en/committees/jc/jcgm/publications](https://www.bipm.org/en/committees/jc/jcgm/publications))
 
 EC regulation (EU) 2017/746
 
