@@ -19,8 +19,9 @@ In others, a report is a simple collection of results, not treated as a document
 This guide proposes a scalable approach:
 * Report as a collection of results: DiagnosticReport (figure 1)
 * Report as a structured collection of results: DiagnosticReport with Composition (figure 2)
-* Report as a document: DiagnosticReport with Composition in a Document Bundle (figure 3)
-allowing the different jurisdictions to select the solution that better fits with their requirements; while assuring the capability for everyone to retrieve laboratory report data by searching per DiagnosticReport.
+* Report as a FHIR Document: DiagnosticReport with Composition in a 'document' Bundle (figure 3)
+
+These choices would allow for different jurisdictions to select the solution that better fits with their requirements, while assuring the capability for everyone to retrieve laboratory report data by searching via DiagnosticReport.
 
 
 In brief:
