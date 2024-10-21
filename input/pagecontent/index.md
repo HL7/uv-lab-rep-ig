@@ -38,7 +38,7 @@ This project used the [HL7 Europe Laboratory Report FHIR IG](https://hl7.eu/fhir
 
 ### Design choices
 
-The solution adopted by this guide - and detailed in the [Design choices](design-choice.html) page - balances the business requirement of some jurisdictions of the Laboratory Report as legally signable document (i.e. as a FHIR document), with the expectation in several usage contexts to not rely on the documental approach. 
+The solution adopted by this guide - and detailed in the [Design choices](design-choice.html) page - balances the business requirement of some jurisdictions of the Laboratory Report as legally signable document (i.e. as a FHIR Document), with the expectation in several usage contexts to not rely on the documental approach. 
 This guide supports a scalable approach allowing different jurisdictions to select the solution that better fits with their requirements, while assuring the capability for everyone to retrieve laboratory report data by searching per DiagnosticReport.
 
 <div>

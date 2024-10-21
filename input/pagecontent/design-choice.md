@@ -6,7 +6,7 @@
 
 There are two ways - in principle - for representing a Laboratory report in HL7 FHIR:
 * by using the DiagnosticReport resource; or 
-* by treating the report as any other clinical document, i.e. using a HL7 FHIR document Bundle.
+* by treating the report as any other clinical document, i.e. using a HL7 FHIR Document Bundle.
 
 The solution proposed in this guide tries to take in consideration the very different meanings that a Laboratory Report can assume in different countries.
 
@@ -56,7 +56,7 @@ The following figures graphically summarizes the described design approach.
 </div>
 
 
-The document based solution, adopted in the European realm, tries to balance the two expectations of having a HL7 FHIR document and searching reports via DiagnosticReport, limiting as much as possible the implementation options. 
+The document based solution, adopted in the European realm, tries to balance the two expectations of having a HL7 FHIR Document and searching reports via DiagnosticReport, limiting as much as possible the implementation options. 
 Moreover it takes into account the R5 DiagnosticReport design pattern where the DiagnosticReport vs. Composition relationship is directed from the DiagnosticReport to the Composition resource.
 
 The authors are aware of the fact that this choice requires additional work by the report creator, requesting to consistently record in both DiagnosticReport and Composition a set of information. 
