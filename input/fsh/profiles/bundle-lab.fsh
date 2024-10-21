@@ -92,48 +92,64 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * entry ^slicing.rules = #open
 
 * entry contains composition 0..1
+* entry[composition] ^short = "Entry in the bundle: Laboratory Report Composition"
 * entry[composition].resource only CompositionLabReportUv
 
 * entry contains diagnosticReport 1..1
+* entry[diagnosticReport] ^short = "Entry in the bundle: Laboratory Report DiagnosticReport"
 * entry[diagnosticReport].resource only DiagnosticReportUvLab
 
 * entry contains patient 0..1
+* entry[patient] ^short = "Entry in the bundle: Patient"
 * entry[patient].resource only Patient or PatientUvLab or PatientAnimalUvLab
 
 * entry contains observation 0..*
+* entry[observation] ^short = "Entry in the bundle:	Laboratory Result Observation"
 * entry[observation].resource only ObservationResultsUvLab
 
 * entry contains specimen 0..*
+* entry[specimen] ^short = "Entry in the bundle: Laboratory Specimen"
 * entry[specimen].resource only SpecimenUvLab
 
 * entry contains serviceRequest 0..*
+* entry[serviceRequest] ^short = "Entry in the bundle: 	Laboratory ServiceRequest"	
 * entry[serviceRequest].resource only ServiceRequestUvLab
 
 * entry contains organization 0..*
+* entry[organization] ^short = "Entry in the bundle: Organization"
 * entry[organization].resource only Organization
+* entry[organization].resource ^short = "Organization"
 
 * entry contains practitioner 0..*
+* entry[practitioner] ^short = "Entry in the bundle: Practitioner"
 * entry[practitioner].resource only PractitionerUvLab
 
 * entry contains practitionerRole 0..*
+* entry[practitionerRole] ^short = "Entry in the bundle: PractitionerRole"
 * entry[practitionerRole].resource only PractitionerRoleUvLab
 
 * entry contains bodyStructure 0..*
+* entry[bodyStructure] ^short = "Entry in the bundle: BodyStructure"
 * entry[bodyStructure].resource only BodyStructureUvLab
 
 * entry contains encounter 0..*
+* entry[encounter] ^short = "Entry in the bundle: Encounter"
 * entry[encounter].resource only Encounter
 
 * entry contains location 0..*
+* entry[location] ^short = "Entry in the bundle: Location"
 * entry[location].resource only Location
 
 * entry contains provenance 0..*
+* entry[provenance] ^short = "Entry in the bundle: Provenance"
 * entry[provenance].resource only Provenance
 
 * entry contains coverage 0..*
+* entry[coverage] ^short = "Entry in the bundle: Coverage"
 * entry[coverage].resource only Coverage
 
 * entry contains device 0..*
+* entry[device] ^short = "Entry in the bundle: Device"
 * entry[device].resource only Device
 
 //* entry contains documentReference 0..*
