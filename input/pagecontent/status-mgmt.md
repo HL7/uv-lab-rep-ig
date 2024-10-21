@@ -1,6 +1,6 @@
 ###  Scenarios
 
-This page describes laboratory report scenarios for the purpose of **highlighting how laboratory report relevant statues should be set**.
+This page describes laboratory report scenarios for the purpose of **highlighting how laboratory report relevant statuses should be set**.
 
 These scenarios, in scope for this guide, relate to tests performed and reported by a clinical laboratory in fulfillment of test orders.
 
@@ -19,7 +19,7 @@ In this case:
 
 #### Partial Laboratory Report
 
-* In some cases, a laboratory might **release a laboratory report** which is either **incomplete** (not all results are available or marked as “final”).
+* In some cases, a laboratory might **release a laboratory report** which is **incomplete** (not all results are available or marked as “final”).
 * This usually occurs when some of the results are known to be produced later, but others need to be communicated to report recipients due to specific organizational and/or process rules; or because of the urgency of some results. Note: The ‘delay’ in the results availability may be due to the nature of the test, or to organizational or technical reasons.
 
 In such cases: 
@@ -28,7 +28,7 @@ In such cases:
 #### Preliminary Laboratory Report
 
 * In some cases, a laboratory might **release a laboratory report** which is either **verified results that are known to change over time.**.
-* This usually occurs for specific methods that require a long performance period, like cultures of slow growing organisms, but intermediate verified results need to be communicated to report recipients due to specific organizational and/or process rules (e.g. culture and susceptibility testing for mycobacterium tuberculosis (MTB))
+* This usually occurs for specific methods that require a long performance period, like cultures of slow growing organisms, but intermediate verified results need to be communicated to report recipients due to specific organizational and/or process rules (e.g. culture and susceptibility testing for Mycobacterium tuberculosis (MTB))
 
 In such cases: 
 * the report status should be set to "preliminary". 
@@ -36,14 +36,14 @@ In such cases:
 ####  Updated Laboratory Report
 
 * A **laboratory report, after being released as “final”, is modified** (edited or added to).
-* the report is complete and verified by an authorized person
+* The report is complete and verified by an authorized person
 
 In this case:
 
-* The report status used will indicate what modifications have occurred:
-  * Status set to “amended” when changes were made to patient demographics or other parts of the report that don't affect the result value (with units, if applicable) or result interpretation
-  * Status set to “corrected” when changes are made to the result value (with units, if applicable) or result interpretation
-  * Status set to “appended” when new results or interpretations are being added
+* the report status used will indicate what modifications have occurred:
+  * status set to “amended” when changes were made to patient demographics or other parts of the report that don't affect the result value (with units, if applicable) or result interpretation
+  * status set to “corrected” when changes are made to the result value (with units, if applicable) or result interpretation
+  * status set to “appended” when new results or interpretations are being added
 
 #### Cancelled Laboratory Report
 
@@ -52,7 +52,7 @@ In this case:
 In such case:
 * the status value should be updated to “cancelled” and 
 * the specific details given - preferably as coded values - in the DiagnosticReport.extension:event-statusReason element.
-* Additional information may be provided in the result comment element as well.
+* additional information may be provided in the result comment element as well.
 
 
 #### Error Laboratory Report
@@ -85,7 +85,7 @@ Please refer to the [Design Choices page](design-choice.html) for details on the
 
 #### Laboratory Report: DiagnosticReport
 
-DiagnosticReport is the HL7 FHIR resource designed for documenting Laboratory report. It includes clinical context such as requesting provider information, and some mix of atomic results, images, textual and coded interpretations, formatted representation of diagnostic reports and status information.
+DiagnosticReport is the HL7 FHIR resource designed for documenting Laboratory reports. It includes clinical context such as requesting provider information, and some mix of atomic results, images, textual and coded interpretations, formatted representation of diagnostic reports and status information.
 
 
 Diagnostic report status value set is comprised from following status codes ( [DiagnosticReportStatus](https://hl7.org/fhir/R4/codesystem-diagnostic-report-status.html) )
@@ -113,8 +113,6 @@ Diagnostic report status value set is comprised from following status codes ( [D
 #### Laboratory report: Composition
 
 A Composition defines the structure and narrative content necessary for a laboratory report. It is a mandatory resource for a Document Bundle this guide is based on (see [FHIR Documents](https://hl7.org/fhir/R4/documents.html) ).
-
-The status of the composition reflects the status of the document and it should be aligned with that of the DiagnosticReport.
 
 The status of the composition reflects the status of the document and it should be aligned with that of the DiagnosticReport.
 Unfortunately, in HL7 FHIR R4 – see the [following paragraph](#hl7-fhir-r4-1) - only a subset of them are allowed for the Composition, requiring some mapping effort in dealing with them. (See the paragraph [DiagnosticReport and Composition status correlation](#diagnosticreport-and-composition-status-correlation) below)
@@ -170,7 +168,7 @@ A laboratory report comprises a set of entries, i.e., the individual results, ea
 
 This stage could be expressed in the Observation resource using a status code, as described in the table below. The allowed state transitions are reported in the following State machine diagram.
 
-It is responsibility of the system curating the report to keep consistency between the statuses of the report and those of the single results. (See 
+It is responsibility of the system curating the report to keep consistency between the statuses of the report and those of the single results.
 
 
 |Lvl|Code|Display|Definition|
@@ -216,7 +214,7 @@ The status of the laboratory report should be reported in both the DiagnosticRep
 
 As previously described, if the alignment is possible for HL7 FHIR R5 (see [HL7 FHIR R5](#hl7-fhir-r5-1) below), the Composition status value set required for HL7 FHIR R4 only includes a subset of the needed concepts.  
 
-The following paragraph describe a possible approach to try to keep this consistency.
+The following paragraph describes a possible approach to try to keep this consistency.
 
 ##### HL7 FHIR R4
 

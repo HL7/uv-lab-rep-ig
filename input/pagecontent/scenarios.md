@@ -1,6 +1,6 @@
 ### Laboratory Report scenarios
 
-This page describes laboratory report scenarios for the purpose of **highlighting how laboratory report relevant statues should be set**.
+This page describes laboratory report scenarios for the purpose of **highlighting how laboratory report relevant statuses should be set**.
 
 These scenarios, in scope for this guide, relate to tests performed and reported by a clinical laboratory in fulfillment of test orders.
 
@@ -19,7 +19,7 @@ In this case:
 
 #### Partial Laboratory Report
 
-* In some cases, a laboratory might **release a laboratory report** which is either **incomplete** (not all results are available or marked as “final”).
+* In some cases, a laboratory might **release a laboratory report** which is **incomplete** (not all results are available or marked as “final”).
 * This usually occurs when some of the results are known to be produced later, but others need to be communicated to report recipients due to specific organizational and/or process rules; or because of the urgency of some results. Note: The ‘delay’ in the results availability may be due to the nature of the test, or to organizational or technical reasons.
 
 In such cases: 
@@ -28,7 +28,7 @@ In such cases:
 #### Preliminary Laboratory Report
 
 * In some cases, a laboratory might **release a laboratory report** which is either **verified results that are known to change over time.**.
-* This usually occurs for specific methods that require a long performance period, like cultures of slow growing organisms, but intermediate verified results need to be communicated to report recipients due to specific organizational and/or process rules (e.g. culture and susceptibility testing for mycobacterium tuberculosis (MTB))
+* This usually occurs for specific methods that require a long performance period, like cultures of slow growing organisms, but intermediate verified results need to be communicated to report recipients due to specific organizational and/or process rules (e.g. culture and susceptibility testing for Mycobacterium tuberculosis (MTB))
 
 In such cases: 
 * the report status should be set to "preliminary". 
