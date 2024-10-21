@@ -58,10 +58,10 @@ pages:
   # semantic-notes.md:
     # title: Laboratory Result Report
     # <--- to be removed
-  scenarios.md:
-    title: Laboratory Report scenarios
+ # scenarios.md:
+  #  title: Laboratory Report scenarios
   status-mgmt.md:
-    title: Managing Laboratory Report statuses
+    title: Laboratory Report Workflow
   design-choice.md:
     title: Design choices
  # challenges.md:
@@ -152,8 +152,8 @@ menu:
     Design Choices: design-choice.html
     Certified reference material: crm.html
   Functional Specifications:
-    Scenarios: scenarios.html
-    Managing statuses: status-mgmt.html
+    # Scenarios: scenarios.html
+    Workflow Management: status-mgmt.html
     # eHN Guideline dataset: logicalModel.html
     Obligations: obligations.html
     Implementation notes: notes.html
