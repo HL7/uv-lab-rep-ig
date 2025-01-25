@@ -3,7 +3,7 @@ Parent: Composition
 //Parent: http://hl7.org/fhir/StructureDefinition/clinicaldocument
 Id: Composition-uv-lab
 Title: "Composition: Laboratory Report"
-Description: "Clinical document used to represent a Laboratory Report for the scope of the HL7 Uv Lab project."
+Description: "Clinical document used to represent a Laboratory Report for the scope of the HL7 UV Lab project."
 * insert SetFmmandStatusRule ( 2, trial-use)
 * . ^short = "Laboratory Report composition"
 * . ^definition = "Laboratory Report composition.

@@ -28,7 +28,7 @@
       "value" : "http://www.hl7.org/Special/committees/orders"
     }]
   }],
-  "description" : "This profile constrains the Observation resource to represent results produced by laboratory tests or panels/studies for the  HL7 Uv Lab project.\nThis observation may represent the result of a simple laboratory test such as hematocrit or it may group the set of results produced by a multi-test study or panel such as a complete blood count, a dynamic function test, a urine specimen study. In the latter case, the observation carries the overall conclusion of the study and or a global interpretation by the producer of the study, in the comment element; and references the atomic results of the study as \"has-member\" child observations.",
+  "description" : "This profile constrains the Observation resource to represent results produced by laboratory tests or panels/studies for the HL7 UV Lab project.\nThis observation may represent the result of a simple laboratory test such as hematocrit or it may group the set of results produced by a multi-test study or panel such as a complete blood count, a dynamic function test, a urine specimen study. In the latter case, the observation carries the overall conclusion of the study and or a global interpretation by the producer of the study, in the comment element; and references the atomic results of the study as \"has-member\" child observations.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",

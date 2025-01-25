@@ -2,7 +2,7 @@ Profile: DiagnosticReportUvLab
 Parent: DiagnosticReport
 Id: DiagnosticReport-uv-lab
 Title: "DiagnosticReport: Laboratory Report"
-Description: "DiagnosticReport used to represent an entry of a Laboratory Report, including its context, for the scope of the HL7 Uv Lab project."
+Description: "DiagnosticReport used to represent an entry of a Laboratory Report, including its context, for the scope of the HL7 UV Lab project."
 
 * insert SetFmmandStatusRule ( 2, trial-use)
 * . ^short = "Laboratory Report DiagnosticReport"

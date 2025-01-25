@@ -54,7 +54,7 @@ Profile: BundleLabReportUv
 Parent: Bundle
 Id: Bundle-uv-lab
 Title: "Bundle: Laboratory Report"
-Description: "Clinical document used to represent a Laboratory Report for the scope of the HL7 Uv Lab Report project."
+Description: "Clinical document used to represent a Laboratory Report for the scope of the HL7 UV Lab Report project."
 
 * insert SetFmmandStatusRule ( 2, trial-use)
 * . ^short = "Laboratory Report bundle"
